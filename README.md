@@ -30,6 +30,34 @@ npm run dev
 | `npm test` | Run Vitest unit tests |
 | `npm run lint` | Lint with oxlint |
 
+## Deploy
+
+### GitHub Pages (default)
+
+Pushes to `main` run `.github/workflows/deploy.yml`, which builds and publishes to GitHub Pages.
+
+1. Fix any [GitHub billing](https://github.com/settings/billing) issues on the account (Actions must be enabled).
+2. In the repo: **Settings → Pages → Build and deployment → Source: GitHub Actions**.
+3. After the workflow succeeds, the site is live at `https://stevechacha.github.io/deptforge/`.
+
+Re-run a failed deploy from the **Actions** tab, or push an empty commit.
+
+### Vercel
+
+```bash
+npx vercel --prod
+```
+
+`vercel.json` includes SPA rewrites for client-side routing.
+
+### Apache / cPanel
+
+```bash
+npm run build
+```
+
+Upload everything inside `dist/` to your web root. The build copies `hosting/.htaccess` into `dist/` for SPA routing.
+
 ## Routes
 
 - `/` — home + system map
