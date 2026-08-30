@@ -63,6 +63,12 @@ export function Header() {
           >
             Departments
           </Link>
+          <Link
+            to="/courses"
+            className="font-mono text-xs uppercase tracking-[0.08em] text-ink-muted no-underline transition-colors hover:text-copper-bright"
+          >
+            Courses
+          </Link>
           <div className="flex items-center gap-2 rounded-sm border border-border bg-surface px-3 py-[7px]">
             <span className="font-mono text-xs text-ink-dim">/</span>
             <input

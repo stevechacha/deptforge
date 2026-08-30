@@ -1,0 +1,398 @@
+{
+  "id": "react",
+  "title": "Learn React",
+  "tagline": "From first component to production-grade applications",
+  "description": "A three-level curriculum for building React skills — from static UIs through data-driven apps to production systems you can ship, test, and deploy.",
+  "prerequisites": [
+    "Basic HTML & CSS (layout, selectors, responsive basics)",
+    "JavaScript fundamentals (variables, functions, arrays, objects)",
+    "Comfort using a terminal and a code editor"
+  ],
+  "tools": [
+    "Vite",
+    "React",
+    "React Router",
+    "TanStack Query",
+    "React Hook Form",
+    "Zod",
+    "Tailwind CSS",
+    "Vitest",
+    "React Testing Library",
+    "Playwright",
+    "Next.js",
+    "TypeScript"
+  ],
+  "relatedRoleId": "frontend-engineer",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "React Foundations",
+      "goal": "Comfortable building simple, static-to-interactive UIs",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Web & JS Prerequisites",
+          "topics": [
+            {
+              "title": "HTML/CSS refresher",
+              "items": [
+                "Semantic HTML, document structure, forms",
+                "CSS layout with flexbox and grid",
+                "Responsive design basics"
+              ]
+            },
+            {
+              "title": "ES6+ essentials",
+              "items": [
+                "let/const, arrow functions",
+                "Destructuring, spread/rest operators",
+                "Template literals and modern array methods (map, filter, reduce)"
+              ]
+            },
+            {
+              "title": "Async JavaScript",
+              "items": [
+                "JSON structure and parsing",
+                "fetch basics for HTTP requests",
+                "async/await introduction"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "React Core Concepts",
+          "topics": [
+            {
+              "title": "What is React & why",
+              "items": [
+                "Component-based UI architecture",
+                "Virtual DOM and reconciliation",
+                "When React fits (and when it does not)"
+              ]
+            },
+            {
+              "title": "Setting up a project",
+              "items": [
+                "Vite + React (recommended over Create React App)",
+                "Project structure and dev server",
+                "Hot module replacement basics"
+              ]
+            },
+            {
+              "title": "JSX syntax rules",
+              "items": [
+                "Expressions in curly braces",
+                "Single root element and fragments",
+                "className, htmlFor, and camelCase attributes"
+              ]
+            },
+            {
+              "title": "Components & props",
+              "items": [
+                "Function components",
+                "Passing and destructuring props",
+                "Composing small components into screens"
+              ]
+            },
+            {
+              "title": "Rendering lists & keys",
+              "items": [
+                "map() to render collections",
+                "Stable key selection",
+                "Avoiding index-as-key pitfalls"
+              ]
+            },
+            {
+              "title": "Conditional rendering",
+              "items": [
+                "if/else, ternary, and logical &&",
+                "Early returns in components",
+                "Showing empty and loading states"
+              ]
+            },
+            {
+              "title": "Basic styling",
+              "items": [
+                "CSS modules",
+                "Inline styles and style objects",
+                "Organizing component styles"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "State & Events",
+          "topics": [
+            {
+              "title": "useState hook",
+              "items": [
+                "Local component state",
+                "State updates and re-renders",
+                "Lifting state when siblings need to share data"
+              ]
+            },
+            {
+              "title": "Handling events",
+              "items": [
+                "onClick, onChange, onSubmit",
+                "Synthetic events in React",
+                "Passing arguments to event handlers"
+              ]
+            },
+            {
+              "title": "Controlled components & forms",
+              "items": [
+                "Controlled inputs (text, checkbox, select)",
+                "Form submission and validation basics",
+                "Managing multiple form fields"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Todo app with add, complete, and delete",
+        "Simple calculator",
+        "Product list with filtering",
+        "Debug components with React DevTools"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Building Real Applications",
+      "goal": "Build multi-page, data-driven, connected applications",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Hooks Deep Dive",
+          "topics": [
+            {
+              "title": "useEffect",
+              "items": [
+                "Data fetching on mount",
+                "Cleanup functions (subscriptions, timers)",
+                "Dependency arrays and stale closure pitfalls"
+              ]
+            },
+            {
+              "title": "useRef, useMemo, useCallback",
+              "items": [
+                "DOM refs and mutable values without re-renders",
+                "Memoizing expensive calculations",
+                "Stabilizing callbacks for child components"
+              ]
+            },
+            {
+              "title": "Custom hooks",
+              "items": [
+                "Extracting reusable stateful logic",
+                "Naming conventions (use*)",
+                "Sharing logic across components"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Routing & Navigation",
+          "topics": [
+            {
+              "title": "React Router",
+              "items": [
+                "Routes, nested routes, and layouts",
+                "URL params and query strings",
+                "Programmatic navigation (useNavigate, Link)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "State Management",
+          "topics": [
+            {
+              "title": "Beyond local state",
+              "items": [
+                "Context API for shared app state",
+                "Lifting state up and prop drilling problems",
+                "Intro to Zustand or Redux Toolkit"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Working with APIs",
+          "topics": [
+            {
+              "title": "REST API integration",
+              "items": [
+                "fetch or axios for HTTP calls",
+                "Loading, error, and empty states",
+                "Environment variables for API URLs"
+              ]
+            },
+            {
+              "title": "TanStack Query intro",
+              "items": [
+                "Caching and background refetch",
+                "Query keys and mutations",
+                "Replacing manual fetch + useEffect patterns"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Forms & Validation",
+          "topics": [
+            {
+              "title": "React Hook Form + validation",
+              "items": [
+                "Registering fields and handling submit",
+                "Schema validation with Zod or Yup",
+                "Error messages and accessible form UX"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Styling at Scale",
+          "topics": [
+            {
+              "title": "Utility-first and component libraries",
+              "items": [
+                "Tailwind CSS or styled-components",
+                "shadcn/ui or MUI for pre-built components",
+                "Theming and design tokens"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Dashboard with charts and summary cards",
+        "E-commerce catalog with cart and checkout flow",
+        "Booking system with API integration",
+        "M-Pesa STK push demo (fintech integration pattern)"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Production-Grade React",
+      "goal": "Architect, optimize, test, and ship scalable applications",
+      "duration": "8–12 wks",
+      "sections": [
+        {
+          "title": "Advanced Patterns",
+          "topics": [
+            {
+              "title": "Composition patterns",
+              "items": [
+                "Compound components",
+                "Render props",
+                "Higher-order components (HOCs)"
+              ]
+            },
+            {
+              "title": "Performance optimization",
+              "items": [
+                "React.memo and when to skip it",
+                "Code-splitting and lazy loading (React.lazy, Suspense)",
+                "List virtualization for large datasets"
+              ]
+            },
+            {
+              "title": "Resilience",
+              "items": [
+                "Error boundaries",
+                "Suspense for data and code loading"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "State & Data Architecture",
+          "topics": [
+            {
+              "title": "Advanced state patterns",
+              "items": [
+                "Redux Toolkit or Zustand at scale",
+                "Server state vs. client state separation",
+                "Optimistic updates and caching strategies"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "TypeScript with React",
+          "topics": [
+            {
+              "title": "Typing React code",
+              "items": [
+                "Typing props, state, and event handlers",
+                "Generic components and hooks",
+                "Typing context and custom hooks"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Testing",
+          "topics": [
+            {
+              "title": "Test pyramid for React",
+              "items": [
+                "Unit tests with Vitest or Jest",
+                "Component tests with React Testing Library",
+                "E2E tests with Playwright or Cypress"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Next.js / Full-Stack React",
+          "topics": [
+            {
+              "title": "Rendering strategies",
+              "items": [
+                "SSR, SSG, and ISR concepts",
+                "App Router and server components",
+                "API routes and server actions"
+              ]
+            },
+            {
+              "title": "Authentication",
+              "items": [
+                "NextAuth, Clerk, or custom JWT flows",
+                "Protected routes and session handling"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Architecture & DevOps",
+          "topics": [
+            {
+              "title": "Project structure",
+              "items": [
+                "Scalable folder layouts",
+                "Monorepos with Turborepo or Nx"
+              ]
+            },
+            {
+              "title": "Shipping & quality",
+              "items": [
+                "CI/CD basics and environment configs",
+                "Accessibility (a11y) at scale",
+                "Security: XSS, CSRF, secure API calls"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "SACCO management portal",
+        "ERP module with role-based access",
+        "Fintech dashboard with M-Pesa integration",
+        "Full auth, test coverage, and deployment (Vercel or VPS)"
+      ]
+    }
+  ]
+}

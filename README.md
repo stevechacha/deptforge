@@ -36,7 +36,13 @@ npm run dev
 - `/departments` — all departments
 - `/departments/:deptId` — department detail
 - `/roles/:roleId` — role detail + learning stages
+- `/courses` — downloadable deep-dive curricula
+- `/courses/:courseId` — full curriculum outline (JSON/Markdown download)
 - `/search?q=` — skill/role search
+
+## Curricula
+
+Full course outlines live in `src/data/curricula/` (`react.json` is the source file; TypeScript re-exports it). Run `npm run export-curricula` to write static JSON and Markdown files to `public/curricula/` for direct download links.
 
 ## Reference
 

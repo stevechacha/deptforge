@@ -1,0 +1,9 @@
+[
+  {
+    "id": "react",
+    "title": "Learn React",
+    "tagline": "From first component to production-grade applications",
+    "json": "/curricula/react-curriculum.json",
+    "markdown": "/curricula/react-curriculum.md"
+  }
+]
