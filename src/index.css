@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 
-:root {
+:root,
+[data-theme='dark'] {
+  color-scheme: dark;
   --bg: #0e1b2e;
   --bg-elevated: #12213a;
   --surface: #182b49;
@@ -15,7 +17,35 @@
   --text-muted: #9baac2;
   --text-dim: #5d7292;
   --danger: #c9622e;
+  --header-bg: rgba(14, 27, 46, 0.92);
+  --chip-teal-border: rgba(79, 163, 130, 0.4);
+  --chip-teal-bg: rgba(79, 163, 130, 0.08);
+  --chip-copper-border: rgba(201, 138, 46, 0.4);
+  --chip-danger-border: rgba(201, 98, 46, 0.4);
   --radius: 2px;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f4f0e8;
+  --bg-elevated: #faf7f1;
+  --surface: #ffffff;
+  --surface-hi: #f0ebe2;
+  --border: #d4cfc4;
+  --border-soft: #e8e2d6;
+  --copper: #a66f1f;
+  --copper-bright: #c98a2e;
+  --teal: #3d8a6d;
+  --teal-bright: #4fa382;
+  --text: #1a2744;
+  --text-muted: #4a5f7a;
+  --text-dim: #7a8ca6;
+  --danger: #b85528;
+  --header-bg: rgba(244, 240, 232, 0.92);
+  --chip-teal-border: rgba(61, 138, 109, 0.35);
+  --chip-teal-bg: rgba(61, 138, 109, 0.1);
+  --chip-copper-border: rgba(166, 111, 31, 0.35);
+  --chip-danger-border: rgba(184, 85, 40, 0.35);
 }
 
 @theme {
@@ -176,8 +206,8 @@ button {
   font-family: var(--font-mono);
   font-size: 11px;
   color: var(--teal-bright);
-  border: 1px solid rgba(79, 163, 130, 0.35);
-  background: rgba(79, 163, 130, 0.08);
+  border: 1px solid var(--chip-teal-border);
+  background: var(--chip-teal-bg);
   padding: 6px 11px;
   border-radius: 20px;
 }
@@ -476,6 +506,49 @@ svg.circuit {
   font-family: var(--font-mono);
   font-size: 13px;
   padding: 20px 0;
+}
+
+.site-header {
+  background: var(--header-bg);
+}
+
+.level-chip-beginner {
+  border-color: var(--chip-teal-border);
+  color: var(--teal-bright);
+}
+
+.level-chip-intermediate {
+  border-color: var(--chip-copper-border);
+  color: var(--copper-bright);
+}
+
+.level-chip-expert {
+  border-color: var(--chip-danger-border);
+  color: var(--danger);
+}
+
+.map-node-bg {
+  fill: var(--bg);
+}
+
+.map-node-surface {
+  fill: var(--surface);
+}
+
+.map-node-text {
+  fill: var(--text);
+}
+
+.map-node-accent {
+  fill: var(--copper-bright);
+}
+
+.map-node-muted {
+  fill: var(--text-muted);
+}
+
+.map-node-stroke {
+  stroke: var(--copper-bright);
 }
 
 @media (max-width: 640px) {

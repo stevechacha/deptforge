@@ -22,7 +22,7 @@ export function RoleModules({ outline }: { outline: LearningModule[] }) {
               </h4>
             </div>
             <div className="flex shrink-0 items-center gap-2">
-              <span className="whitespace-nowrap rounded-full border border-[rgba(79,163,130,0.4)] px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.05em] text-teal-bright">
+              <span className="level-chip-beginner whitespace-nowrap rounded-full border px-2.5 py-0.5 font-mono text-[10px] uppercase tracking-[0.05em]">
                 {module.level}
               </span>
               <span className="mono whitespace-nowrap text-[11px] text-ink-dim">

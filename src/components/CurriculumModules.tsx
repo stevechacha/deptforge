@@ -1,9 +1,9 @@
 import type { Course, CourseLevelModule } from '../data/curriculum-types'
 
 const LEVEL_STYLES: Record<CourseLevelModule['level'], string> = {
-  Beginner: 'border-[rgba(79,163,130,0.4)] text-teal-bright',
-  Intermediate: 'border-[rgba(201,138,46,0.4)] text-copper-bright',
-  Expert: 'border-[rgba(201,98,46,0.4)] text-danger',
+  Beginner: 'level-chip-beginner',
+  Intermediate: 'level-chip-intermediate',
+  Expert: 'level-chip-expert',
 }
 
 export function CurriculumModules({ course }: { course: Course }) {

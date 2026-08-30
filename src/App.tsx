@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { BrowserRouter, Navigate, Route, Routes, useLocation } from 'react-router-dom'
+import { ThemeProvider } from './context/ThemeContext'
 import { Footer } from './components/layout/Footer'
 import { Header } from './components/layout/Header'
 import { DepartmentPage } from './pages/DepartmentPage'
@@ -44,8 +45,10 @@ function AppShell() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <AppShell />
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter>
+        <AppShell />
+      </BrowserRouter>
+    </ThemeProvider>
   )
 }

@@ -54,32 +54,27 @@ export function CircuitMap() {
           }}
         >
           <rect
-            className="core-shape"
+            className="core-shape map-node-bg map-node-stroke"
             x={cx - 46}
             y={cy - 46}
             width="92"
             height="92"
-            fill="#0E1B2E"
-            stroke="#E8A33D"
             strokeWidth="1.6"
             transform={`rotate(45 ${cx} ${cy})`}
           />
           <circle
-            className="core-shape"
+            className="core-shape map-node-surface map-node-stroke"
             cx={cx}
             cy={cy}
             r="30"
-            fill="#182B49"
-            stroke="#E8A33D"
             strokeWidth="1.2"
           />
           <text
             x={cx}
             y={cy - 3}
             textAnchor="middle"
-            className="node-title"
+            className="node-title map-node-text"
             fontSize="11"
-            fill="#EDE7DA"
           >
             TECH
           </text>
@@ -87,9 +82,8 @@ export function CircuitMap() {
             x={cx}
             y={cy + 13}
             textAnchor="middle"
-            className="node-sub"
+            className="node-sub map-node-accent"
             fontSize="9"
-            fill="#E8A33D"
           >
             CAREER CORE
           </text>
@@ -110,11 +104,10 @@ export function CircuitMap() {
             >
               <circle className="ring" cx={h.x} cy={h.y} r="46" stroke={h.d.color} />
               <circle
-                className="core-shape"
+                className="core-shape map-node-surface"
                 cx={h.x}
                 cy={h.y}
                 r="34"
-                fill="#182B49"
                 stroke={h.d.color}
                 strokeWidth="1.4"
               />
@@ -122,9 +115,8 @@ export function CircuitMap() {
                 x={h.x}
                 y={h.y - 2}
                 textAnchor="middle"
-                className="node-title"
+                className="node-title map-node-text"
                 fontSize="12"
-                fill="#EDE7DA"
               >
                 {h.d.icon}
               </text>
@@ -143,9 +135,8 @@ export function CircuitMap() {
               x={h.x}
               y={h.y + 62}
               textAnchor="middle"
-              className="node-sub"
+              className="node-sub map-node-muted"
               fontSize="10.5"
-              fill="#9BAAC2"
               fontFamily="Space Grotesk, sans-serif"
               fontWeight="600"
             >
