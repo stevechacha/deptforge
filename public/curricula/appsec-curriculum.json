@@ -1,0 +1,270 @@
+{
+  "id": "appsec",
+  "title": "Learn Application Security",
+  "tagline": "Secure software by design — find flaws early, fix them responsibly",
+  "description": "A three-level curriculum for Application Security Engineers. Learn how modern apps fail, how to review and test them with authorization, and how to embed defenses into design, CI/CD, and incident response — always within legal and ethical boundaries.",
+  "prerequisites": [
+    "Comfort with at least one programming language (e.g. Python, JavaScript, Java, or Go)",
+    "Basic web concepts: HTTP, cookies, sessions, and APIs",
+    "Willingness to work only on systems you own or have written permission to test"
+  ],
+  "tools": [
+    "OWASP ZAP",
+    "Burp Suite Community",
+    "Semgrep",
+    "CodeQL / SAST",
+    "Dependency-Check / SCA",
+    "Postman",
+    "Docker",
+    "Git",
+    "GitHub Actions / CI",
+    "Threat modeling (STRIDE / DFDs)"
+  ],
+  "relatedRoleId": "appsec-engineer",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "Secure Development Foundations",
+      "goal": "Explain common web risks and apply basic secure-coding and review habits",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Ethics, Scope & Mindset",
+          "topics": [
+            {
+              "title": "Authorized testing only",
+              "items": [
+                "Written permission, scopes, and rules of engagement",
+                "What is out of scope and how to stop immediately",
+                "Responsible disclosure and coordinated vulnerability reporting"
+              ]
+            },
+            {
+              "title": "AppSec roles & outcomes",
+              "items": [
+                "How AppSec partners with engineering and product",
+                "Shift-left vs. runtime defenses",
+                "Risk language: likelihood, impact, and business context"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Web & API Attack Surface",
+          "topics": [
+            {
+              "title": "HTTP & trust boundaries",
+              "items": [
+                "Requests, responses, headers, and cookies",
+                "Client vs. server trust — never trust input",
+                "Sessions, tokens, and authentication basics"
+              ]
+            },
+            {
+              "title": "OWASP Top 10 overview",
+              "items": [
+                "Injection, XSS, and broken access control at a conceptual level",
+                "Misconfiguration and vulnerable components",
+                "Mapping findings to remediation owners"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Secure Coding Essentials",
+          "topics": [
+            {
+              "title": "Input handling",
+              "items": [
+                "Validation, encoding, and parameterized queries",
+                "File uploads and path traversal defenses",
+                "Secrets: never commit keys; use env/secret stores"
+              ]
+            },
+            {
+              "title": "First security reviews",
+              "items": [
+                "Reading a PR with a security checklist",
+                "Spotting hardcoded credentials and debug endpoints",
+                "Documenting issues without blame"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Write a one-page rules-of-engagement template for an internal lab app",
+        "Map the attack surface of a simple web app (routes, auth, data stores)",
+        "Fix three intentional insecure patterns in a training codebase (with tests)",
+        "Produce a beginner AppSec checklist for pull-request review"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Assessment & Pipeline Security",
+      "goal": "Run authorized assessments and wire security checks into the delivery pipeline",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Threat Modeling",
+          "topics": [
+            {
+              "title": "Diagrams & STRIDE",
+              "items": [
+                "Data-flow diagrams for a feature or service",
+                "STRIDE categories applied to real components",
+                "Prioritizing threats that matter to the business"
+              ]
+            },
+            {
+              "title": "Abuse cases",
+              "items": [
+                "Turning user stories into abuse cases",
+                "AuthZ matrix: who can do what on which resource",
+                "Feeding model outputs into backlog items"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "SAST, SCA & DAST",
+          "topics": [
+            {
+              "title": "Static & dependency analysis",
+              "items": [
+                "Running Semgrep or similar SAST on a repo",
+                "SCA for known vulnerable libraries and licenses",
+                "Triage: false positives vs. real risk"
+              ]
+            },
+            {
+              "title": "Dynamic testing (authorized)",
+              "items": [
+                "Baseline scans with ZAP or Burp against a lab target",
+                "Manual verification of automated findings",
+                "Safe handling of credentials and scan data"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "APIs & Auth Hardening",
+          "topics": [
+            {
+              "title": "API security",
+              "items": [
+                "Broken object-level authorization (BOLA/IDOR) patterns",
+                "Rate limiting, pagination, and mass assignment",
+                "OpenAPI reviews for over-exposed fields"
+              ]
+            },
+            {
+              "title": "AuthN / AuthZ deep dive",
+              "items": [
+                "OAuth/OIDC pitfalls (redirects, scopes, token storage)",
+                "Session fixation, CSRF, and cookie flags",
+                "Multi-tenant isolation checks"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "CI/CD Security Gates",
+          "topics": [
+            {
+              "title": "Pipeline controls",
+              "items": [
+                "Failing builds on high-severity SAST/SCA findings",
+                "Secret scanning in CI",
+                "Signed commits and protected branches as security controls"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Threat model a feature end-to-end and file prioritized backlog tickets",
+        "Add SAST + SCA to CI with a documented triage process",
+        "Authorized API assessment report for a lab service (findings + remediations)",
+        "Design an authZ test matrix and automate a few critical cases"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Program Design & Resilience",
+      "goal": "Lead AppSec programs that prevent, detect, and respond at scale",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Secure SDLC at Scale",
+          "topics": [
+            {
+              "title": "Program building blocks",
+              "items": [
+                "Security champions, training, and office hours",
+                "Risk acceptance and exception workflows",
+                "Metrics that drive behavior (not vanity scan counts)"
+              ]
+            },
+            {
+              "title": "Architecture reviews",
+              "items": [
+                "Reviewing new services before build",
+                "Trust zones, zero-trust assumptions, and shared libraries",
+                "Supply-chain: SBOM, provenance, and signed artifacts"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Advanced Testing & Bug Bounty Ops",
+          "topics": [
+            {
+              "title": "Deep assessments",
+              "items": [
+                "Combining automated coverage with focused manual testing",
+                "Business-logic flaws that scanners miss",
+                "Coordinating with pen-test partners under clear scope"
+              ]
+            },
+            {
+              "title": "Vulnerability management",
+              "items": [
+                "Severity, SLA, and retest cycles",
+                "Responsible disclosure intake and researcher communication",
+                "Public CVE process awareness (when you are a vendor)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Detection & Incident Collaboration",
+          "topics": [
+            {
+              "title": "From finding to fix in production",
+              "items": [
+                "WAF/RASP as compensating controls — not substitutes for fixes",
+                "Working with SOC on app-layer signals",
+                "Post-incident: root cause, secure redesign, and lessons learned"
+              ]
+            },
+            {
+              "title": "Compliance as engineering",
+              "items": [
+                "Mapping controls to OWASP ASVS / NIST CSF language",
+                "Evidence collection without theater",
+                "Privacy and security overlap (data minimization, logging hygiene)"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Draft an AppSec program charter with metrics, SLAs, and exception policy",
+        "Run a tabletop for a critical web vuln disclosure and document the playbook",
+        "Design a secure reference architecture for a multi-tenant SaaS API",
+        "Build an ASVS-inspired control checklist mapped to your stack"
+      ]
+    }
+  ]
+}

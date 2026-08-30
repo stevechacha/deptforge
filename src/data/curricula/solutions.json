@@ -1,0 +1,233 @@
+{
+  "id": "solutions",
+  "title": "Learn Solutions Engineering",
+  "tagline": "From discovery demos to architectures customers will buy and run",
+  "description": "A three-level curriculum for solutions engineers — translating customer problems into credible demos, technical designs, and mutual success plans that win deals and survive implementation.",
+  "prerequisites": [
+    "Solid technical foundation in at least one domain (APIs, cloud, data, or security)",
+    "Comfort presenting to mixed technical and business audiences",
+    "Willingness to learn products deeply and admit what you do not know"
+  ],
+  "tools": [
+    "CRM (Salesforce / HubSpot)",
+    "Demo environments / sandboxes",
+    "Diagramming (draw.io / Lucidchart / Excalidraw)",
+    "Postman / sample APIs",
+    "Slide decks & live demos",
+    "Notion / Confluence",
+    "Zoom / Meet",
+    "Proposal & RFP tools",
+    "Observability dashboards (for POV metrics)",
+    "Git (for demo repos)"
+  ],
+  "relatedRoleId": "solutions-engineer",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "SE Foundations",
+      "goal": "Run discovery, deliver a crisp product demo, and capture requirements accurately",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Customer Discovery",
+          "topics": [
+            {
+              "title": "Asking the right questions",
+              "items": [
+                "Business outcomes vs. feature shopping",
+                "Stakeholders, buying process, and timeline",
+                "Current state, constraints, and success metrics"
+              ]
+            },
+            {
+              "title": "Qualification partnership",
+              "items": [
+                "Working with AEs without becoming a salesperson-only",
+                "Technical go/no-go signals",
+                "Documenting assumptions and open questions"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Demo Craft",
+          "topics": [
+            {
+              "title": "Story-driven demos",
+              "items": [
+                "Persona-based scripts, not feature tours",
+                "Environment prep and failure recovery",
+                "Timeboxing and leaving room for questions"
+              ]
+            },
+            {
+              "title": "Technical credibility",
+              "items": [
+                "Explaining APIs, auth, and data flow simply",
+                "Handling “how do you integrate with X?”",
+                "Parking lot for deep-dives"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Artifacts",
+          "topics": [
+            {
+              "title": "Write-ups that stick",
+              "items": [
+                "Discovery notes and mutual action plans",
+                "Simple architecture sketches",
+                "Follow-up emails that advance the deal"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Discovery call role-play with notes and success criteria",
+        "15-minute persona demo with backup plan for a failure",
+        "One-page solution sketch for a sample customer problem",
+        "Mutual action plan template filled for a mock opportunity"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Solution Design & POVs",
+      "goal": "Own technical evaluations, POCs/POVs, and integration designs that de-risk purchase",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Solution Architecture",
+          "topics": [
+            {
+              "title": "Designing fit",
+              "items": [
+                "Reference architectures tailored to the customer",
+                "Security, privacy, and compliance talking points",
+                "Sizing, performance, and cost ranges"
+              ]
+            },
+            {
+              "title": "Integrations",
+              "items": [
+                "Auth patterns (SSO, SCIM, API keys)",
+                "Webhooks, ETL, and event-driven options",
+                "Data mapping workshops"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Proofs & Evaluations",
+          "topics": [
+            {
+              "title": "POV / POC management",
+              "items": [
+                "Scoped success criteria before you start",
+                "Environment access, sample data, and timeline",
+                "Scoring results and recommending next steps"
+              ]
+            },
+            {
+              "title": "RFPs & security reviews",
+              "items": [
+                "Answering technical questionnaires accurately",
+                "Partnering with security and product for edge cases",
+                "Competitive differentiation without trash talk"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Multi-Threading",
+          "topics": [
+            {
+              "title": "Working the account",
+              "items": [
+                "Champion vs. economic buyer vs. blocker",
+                "Workshops for architects and operators",
+                "Internal handoff to onboarding/CS"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Customer-specific architecture + integration sequence diagram",
+        "POV plan with success metrics, timeline, and owners",
+        "Completed sample security/RFP questionnaire pack",
+        "Workshop deck for a technical evaluation committee"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Strategic Solutions Leadership",
+      "goal": "Shape complex deals, product feedback loops, and reusable SE playbooks at scale",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Complex Deals",
+          "topics": [
+            {
+              "title": "Enterprise pursuits",
+              "items": [
+                "Multi-product and partner solutions",
+                "Phased rollout and value realization plans",
+                "Executive briefings that stay technical enough"
+              ]
+            },
+            {
+              "title": "Risk & negotiation support",
+              "items": [
+                "Contractual SLAs and technical feasibility",
+                "Custom work vs. roadmap influence",
+                "Saying no while preserving the relationship"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Scale the Practice",
+          "topics": [
+            {
+              "title": "SE systems",
+              "items": [
+                "Demo environments and reusable assets",
+                "Win/loss technical retrospectives",
+                "Onboarding new SEs and certification paths"
+              ]
+            },
+            {
+              "title": "Product partnership",
+              "items": [
+                "Structured product feedback from the field",
+                "Beta and design-partner programs",
+                "Competitive intelligence that product can use"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Leadership",
+          "topics": [
+            {
+              "title": "Influence",
+              "items": [
+                "Coaching AEs on technical discovery",
+                "Prioritizing SE time across a pipeline",
+                "Building trust as the technical voice of the customer"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Enterprise pursuit pack: architecture, POV, exec brief, MAP",
+        "SE playbook (discovery, demo, POV, handoff) for your product",
+        "Win/loss technical retro with product recommendations",
+        "Reusable demo environment + asset library design"
+      ]
+    }
+  ]
+}

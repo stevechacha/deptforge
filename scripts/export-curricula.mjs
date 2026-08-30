@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from 'node:fs/promises'
+import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -6,8 +6,6 @@ const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = join(__dirname, '..')
 const dataDir = join(root, 'src', 'data', 'curricula')
 const outDir = join(root, 'public', 'curricula')
-
-const COURSE_FILES = ['react.json']
 
 /** @param {unknown} course */
 function courseToMarkdown(course) {
@@ -66,12 +64,17 @@ function courseToMarkdown(course) {
 }
 
 async function main() {
+  const courseFiles = (await readdir(dataDir)).filter((file) =>
+    file.endsWith('.json'),
+  )
   const courses = []
 
-  for (const file of COURSE_FILES) {
+  for (const file of courseFiles) {
     const raw = await readFile(join(dataDir, file), 'utf8')
     courses.push(JSON.parse(raw))
   }
+
+  courses.sort((a, b) => a.title.localeCompare(b.title))
 
   await mkdir(outDir, { recursive: true })
 

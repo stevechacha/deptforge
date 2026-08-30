@@ -1,9 +1,226 @@
 [
   {
+    "id": "android",
+    "title": "Learn Android",
+    "tagline": "From first composable to production-grade Kotlin apps",
+    "json": "/curricula/android-curriculum.json",
+    "markdown": "/curricula/android-curriculum.md"
+  },
+  {
+    "id": "appsec",
+    "title": "Learn Application Security",
+    "tagline": "Secure software by design — find flaws early, fix them responsibly",
+    "json": "/curricula/appsec-curriculum.json",
+    "markdown": "/curricula/appsec-curriculum.md"
+  },
+  {
+    "id": "backend-csharp",
+    "title": "Learn Backend with C#",
+    "tagline": "ASP.NET Core APIs from first controller to production services",
+    "json": "/curricula/backend-csharp-curriculum.json",
+    "markdown": "/curricula/backend-csharp-curriculum.md"
+  },
+  {
+    "id": "backend-go",
+    "title": "Learn Backend with Go",
+    "tagline": "Idiomatic Go APIs from first handler to production services",
+    "json": "/curricula/backend-go-curriculum.json",
+    "markdown": "/curricula/backend-go-curriculum.md"
+  },
+  {
+    "id": "backend",
+    "title": "Learn Backend with Node.js",
+    "tagline": "TypeScript APIs from first route to production services",
+    "json": "/curricula/backend-curriculum.json",
+    "markdown": "/curricula/backend-curriculum.md"
+  },
+  {
+    "id": "backend-python",
+    "title": "Learn Backend with Python",
+    "tagline": "FastAPI or Django APIs from first route to production services",
+    "json": "/curricula/backend-python-curriculum.json",
+    "markdown": "/curricula/backend-python-curriculum.md"
+  },
+  {
+    "id": "cloud",
+    "title": "Learn Cloud",
+    "tagline": "From console clicks to architecture you can provision, cost, and defend",
+    "json": "/curricula/cloud-curriculum.json",
+    "markdown": "/curricula/cloud-curriculum.md"
+  },
+  {
+    "id": "cloud-security",
+    "title": "Learn Cloud Security",
+    "tagline": "Secure cloud estates — identity, data, and infrastructure by design",
+    "json": "/curricula/cloud-security-curriculum.json",
+    "markdown": "/curricula/cloud-security-curriculum.md"
+  },
+  {
+    "id": "devops",
+    "title": "Learn DevOps",
+    "tagline": "From scripts on a laptop to pipelines that ship safely",
+    "json": "/curricula/devops-curriculum.json",
+    "markdown": "/curricula/devops-curriculum.md"
+  },
+  {
+    "id": "fullstack",
+    "title": "Learn Full-Stack",
+    "tagline": "From a static page to a feature you can ship end-to-end",
+    "json": "/curricula/fullstack-curriculum.json",
+    "markdown": "/curricula/fullstack-curriculum.md"
+  },
+  {
+    "id": "ios",
+    "title": "Learn iOS",
+    "tagline": "From first SwiftUI view to App Store-ready production apps",
+    "json": "/curricula/ios-curriculum.json",
+    "markdown": "/curricula/ios-curriculum.md"
+  },
+  {
+    "id": "it-support",
+    "title": "Learn IT Support",
+    "tagline": "From ticket triage to trusted end-user problem solving",
+    "json": "/curricula/it-support-curriculum.json",
+    "markdown": "/curricula/it-support-curriculum.md"
+  },
+  {
+    "id": "network",
+    "title": "Learn Networking",
+    "tagline": "From packets and subnets to resilient enterprise networks",
+    "json": "/curricula/network-curriculum.json",
+    "markdown": "/curricula/network-curriculum.md"
+  },
+  {
+    "id": "pentest",
+    "title": "Learn Penetration Testing",
+    "tagline": "Authorized offensive testing that makes defenses stronger",
+    "json": "/curricula/pentest-curriculum.json",
+    "markdown": "/curricula/pentest-curriculum.md"
+  },
+  {
+    "id": "performance",
+    "title": "Learn Performance Engineering",
+    "tagline": "From load scripts to production capacity you can defend",
+    "json": "/curricula/performance-curriculum.json",
+    "markdown": "/curricula/performance-curriculum.md"
+  },
+  {
+    "id": "platform",
+    "title": "Learn Platform Engineering",
+    "tagline": "From cluster YAML to paved paths other engineers actually use",
+    "json": "/curricula/platform-curriculum.json",
+    "markdown": "/curricula/platform-curriculum.md"
+  },
+  {
+    "id": "product-manager",
+    "title": "Learn Product Management",
+    "tagline": "From problem briefs to shipped outcomes — decide what to build and why",
+    "json": "/curricula/product-manager-curriculum.json",
+    "markdown": "/curricula/product-manager-curriculum.md"
+  },
+  {
+    "id": "qa",
+    "title": "Learn QA",
+    "tagline": "From exploratory checks to disciplined quality ownership",
+    "json": "/curricula/qa-curriculum.json",
+    "markdown": "/curricula/qa-curriculum.md"
+  },
+  {
     "id": "react",
     "title": "Learn React",
     "tagline": "From first component to production-grade applications",
     "json": "/curricula/react-curriculum.json",
     "markdown": "/curricula/react-curriculum.md"
+  },
+  {
+    "id": "release",
+    "title": "Learn Release Management",
+    "tagline": "Ship on schedule — with risk controlled and rollback ready",
+    "json": "/curricula/release-curriculum.json",
+    "markdown": "/curricula/release-curriculum.md"
+  },
+  {
+    "id": "soc",
+    "title": "Learn Security Operations",
+    "tagline": "Detect, triage, and respond — calmly and by the book",
+    "json": "/curricula/soc-curriculum.json",
+    "markdown": "/curricula/soc-curriculum.md"
+  },
+  {
+    "id": "sre",
+    "title": "Learn Site Reliability",
+    "tagline": "From uptime slogans to SLOs, incidents, and less toil",
+    "json": "/curricula/sre-curriculum.json",
+    "markdown": "/curricula/sre-curriculum.md"
+  },
+  {
+    "id": "solutions",
+    "title": "Learn Solutions Engineering",
+    "tagline": "From discovery demos to architectures customers will buy and run",
+    "json": "/curricula/solutions-curriculum.json",
+    "markdown": "/curricula/solutions-curriculum.md"
+  },
+  {
+    "id": "sysadmin",
+    "title": "Learn Systems Administration",
+    "tagline": "From first servers to reliable, automated infrastructure",
+    "json": "/curricula/sysadmin-curriculum.json",
+    "markdown": "/curricula/sysadmin-curriculum.md"
+  },
+  {
+    "id": "tech-writing",
+    "title": "Learn Technical Writing",
+    "tagline": "From confusing READMEs to docs people can actually follow",
+    "json": "/curricula/tech-writing-curriculum.json",
+    "markdown": "/curricula/tech-writing-curriculum.md"
+  },
+  {
+    "id": "automation",
+    "title": "Learn Test Automation",
+    "tagline": "From first UI script to reliable CI-gated suites",
+    "json": "/curricula/automation-curriculum.json",
+    "markdown": "/curricula/automation-curriculum.md"
+  },
+  {
+    "id": "uiux",
+    "title": "Learn UI/UX Design",
+    "tagline": "From first wireframe to systems and flows people can actually use",
+    "json": "/curricula/uiux-curriculum.json",
+    "markdown": "/curricula/uiux-curriculum.md"
+  },
+  {
+    "id": "ux-research",
+    "title": "Learn UX Research",
+    "tagline": "From a research question to insights that change what the team builds",
+    "json": "/curricula/ux-research-curriculum.json",
+    "markdown": "/curricula/ux-research-curriculum.md"
+  },
+  {
+    "id": "python-data-analyst",
+    "title": "Python for Data Analysts",
+    "tagline": "From spreadsheets to pandas — answers you can trust and present",
+    "json": "/curricula/python-data-analyst-curriculum.json",
+    "markdown": "/curricula/python-data-analyst-curriculum.md"
+  },
+  {
+    "id": "python-data-engineer",
+    "title": "Python for Data Engineers",
+    "tagline": "From scripts to trusted pipelines — warehouse data the company can use",
+    "json": "/curricula/python-data-engineer-curriculum.json",
+    "markdown": "/curricula/python-data-engineer-curriculum.md"
+  },
+  {
+    "id": "python-data-scientist",
+    "title": "Python for Data Scientists",
+    "tagline": "From EDA to models that predict — and explanations stakeholders can use",
+    "json": "/curricula/python-data-scientist-curriculum.json",
+    "markdown": "/curricula/python-data-scientist-curriculum.md"
+  },
+  {
+    "id": "python-ml-engineer",
+    "title": "Python for ML / AI Engineers",
+    "tagline": "From notebooks to production systems — serving models and LLM features",
+    "json": "/curricula/python-ml-engineer-curriculum.json",
+    "markdown": "/curricula/python-ml-engineer-curriculum.md"
   }
 ]

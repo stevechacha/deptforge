@@ -1,0 +1,264 @@
+{
+  "id": "platform",
+  "title": "Learn Platform Engineering",
+  "tagline": "From cluster YAML to paved paths other engineers actually use",
+  "description": "A three-level curriculum for Platform Engineers — Kubernetes and cloud-native building blocks, then self-service golden paths and an internal developer portal, then governance, DX metrics, and a platform that scales across teams. Your users are other engineers; product thinking is part of the job.",
+  "prerequisites": [
+    "Software engineering background (you will write APIs, CLIs, and glue — not only YAML)",
+    "Working Kubernetes and Git; Terraform or Helm at a beginner level helps",
+    "Empathy for app developers: you have shipped an app through someone else's 'platform'"
+  ],
+  "tools": [
+    "Kubernetes",
+    "Helm or Kustomize",
+    "Terraform",
+    "Backstage (or similar IDP)",
+    "Argo CD or Flux",
+    "GitHub Actions",
+    "Go or Python",
+    "Crossplane or operators",
+    "Git/GitHub"
+  ],
+  "relatedRoleId": "platform-engineer",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "Cloud-Native & Developer Workflows",
+      "goal": "See the whole path from git push to a running service, and operate Kubernetes as the substrate",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Kubernetes Fundamentals",
+          "topics": [
+            {
+              "title": "Workloads and networking",
+              "items": [
+                "Deployments, Services, Ingress/Gateway, and ConfigMaps/Secrets",
+                "Namespaces, RBAC, and ResourceQuotas as tenancy primitives",
+                "Health probes, rollouts, and why CrashLoopBackOff is a product bug"
+              ]
+            },
+            {
+              "title": "Packaging",
+              "items": [
+                "Helm charts or Kustomize overlays without a snowflake per app",
+                "Values that app teams may change vs. ones the platform owns",
+                "Chart testing and versioning like application libraries"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "The Developer Path",
+          "topics": [
+            {
+              "title": "Workflow mapping",
+              "items": [
+                "Interview five engineers: where time actually goes (tickets, tickets, YAML)",
+                "Inner loop vs. CI vs. production — different failure modes",
+                "What 'works on my laptop' still leaks into the cluster"
+              ]
+            },
+            {
+              "title": "GitOps at a working level",
+              "items": [
+                "Desired state in git; a reconciler in the cluster",
+                "App-of-apps or application sets without boiling the ocean",
+                "Promotion: same artifact, different env config"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Platform as a Product",
+          "topics": [
+            {
+              "title": "Who you serve",
+              "items": [
+                "App teams as customers: support, docs, and a roadmap",
+                "Golden path vs. escape hatches",
+                "Saying no to a snowflake that would become your on-call"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Helm/Kustomize chart that deploys a sample API with probes and resources",
+        "Documented path: local → CI image → cluster, with the pain points listed",
+        "Namespace + RBAC layout for two fake teams sharing one cluster"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Golden Paths & Self-Service",
+      "goal": "Let a team create a service without opening a ticket to the platform group",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Templates & Scaffolding",
+          "topics": [
+            {
+              "title": "Golden-path design",
+              "items": [
+                "Cookiecutter/Copier/Backstage software templates: repo + CI + chart",
+                "Sensible defaults: health, metrics, PDB, and non-root",
+                "Version the template; migrate old services on purpose"
+              ]
+            },
+            {
+              "title": "CI/CD as a platform API",
+              "items": [
+                "Reusable workflows app teams call, not copy",
+                "OIDC to cloud; no shared deploy keys in every repo",
+                "Required checks the platform owns (lint, test, image scan)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Internal Developer Portal",
+          "topics": [
+            {
+              "title": "Backstage (or similar)",
+              "items": [
+                "Software catalog: ownership, docs, and on-call",
+                "Software templates that create a running skeleton",
+                "TechDocs so the golden path is not a Confluence ghost town"
+              ]
+            },
+            {
+              "title": "Self-service infrastructure",
+              "items": [
+                "Request a database/bucket via catalog, CRD, or Terraform Cloud workspace",
+                "Guardrails: sizes, regions, and encryption on by default",
+                "Human approval only when policy cannot decide"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "APIs & CLIs for Engineers",
+          "topics": [
+            {
+              "title": "Internal tooling",
+              "items": [
+                "A CLI or API that wraps kubectl/Terraform for the 80% path",
+                "Idempotent operations and clear error messages",
+                "Authn/z: who can prod-apply, who can only staging"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Day-2 on the Path",
+          "topics": [
+            {
+              "title": "Operate after create",
+              "items": [
+                "Logs, metrics, and traces wired in the template — not optional extras",
+                "How an app team rolls back without a platform ticket",
+                "Secret injection patterns that do not leak into git"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Service template: repo + CI + Kubernetes manifest + README",
+        "Backstage (or a thin portal) catalog entry + create-a-service flow",
+        "Self-service 'get me a Postgres' with size limits and encryption enforced"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Scaling the Platform",
+      "goal": "Govern many teams, measure adoption, and treat the platform as a product with SLOs",
+      "duration": "8–10 wks",
+      "sections": [
+        {
+          "title": "Multi-Team Governance",
+          "topics": [
+            {
+              "title": "Tenancy and policy",
+              "items": [
+                "Cluster vs. namespace vs. account isolation — pick for blast radius",
+                "Policy as code (OPA/Kyverno or cloud SCPs) for the non-negotiables",
+                "Progressive delivery: same platform, different risk for payments vs. blogs"
+              ]
+            },
+            {
+              "title": "Operators and control planes",
+              "items": [
+                "CRDs/operators or Crossplane compositions as the real API",
+                "Upgrade strategy for the platform without stranding app teams",
+                "Versioned contracts: you break templates on a schedule, with a migration"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Developer Experience Metrics",
+          "topics": [
+            {
+              "title": "What to measure",
+              "items": [
+                "Time to first deploy, lead time, and change fail rate (DORA-adjacent)",
+                "Template adoption vs. snowflake count",
+                "Support volume: tickets per team per month as a product metric"
+              ]
+            },
+            {
+              "title": "Adoption, not vanity",
+              "items": [
+                "Why teams bypass the path — and whether to fix the path or the policy",
+                "Internal roadmap and changelog like an external product",
+                "Office hours and a champion in each product team"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Cost, Reliability & SLOs",
+          "topics": [
+            {
+              "title": "Platform SLOs",
+              "items": [
+                "The platform has SLOs: template create success, deploy success, cluster availability",
+                "Error budgets for the paved path vs. app team feature work",
+                "Shared on-call: platform vs. app — clear boundaries"
+              ]
+            },
+            {
+              "title": "Cost at platform scale",
+              "items": [
+                "Showback/chargeback so teams see idle namespaces",
+                "Default requests/limits and bin-packing without surprise throttling",
+                "Fintech/SACCO: separate prod paths for payment services with extra gates"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Security of the Path",
+          "topics": [
+            {
+              "title": "Supply chain and secrets",
+              "items": [
+                "Signed images, admission that rejects unsigned, and SBOMs",
+                "Secret stores and short-lived credentials as the default template",
+                "Audit: who deployed what, for regulators and for Tuesday's incident"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Golden-path v2: template + portal + policy that blocks public databases",
+        "DX report: time-to-first-deploy before/after, adoption %, snowflake count",
+        "Platform SLO dashboard and a game-day for 'template create is down'",
+        "Paved path for a SACCO payments service: extra checks, audit catalog, isolated namespace/account"
+      ]
+    }
+  ]
+}

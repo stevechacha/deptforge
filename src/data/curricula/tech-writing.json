@@ -1,0 +1,255 @@
+{
+  "id": "tech-writing",
+  "title": "Learn Technical Writing",
+  "tagline": "From confusing READMEs to docs people can actually follow",
+  "description": "A three-level curriculum for Technical Writers. Learn plain language and docs-as-code, then document APIs and product workflows with engineers, then run a docs system — style, versioning, and measurement — so users and teammates can finish the job without a Slack thread.",
+  "prerequisites": [
+    "Strong writing in the language you will document in (usually English)",
+    "Comfort reading technical material even if you do not write production code",
+    "Willingness to ask 'dumb' questions until the steps are actually true"
+  ],
+  "tools": [
+    "Markdown",
+    "Git / GitHub",
+    "Docusaurus / MkDocs",
+    "OpenAPI / Swagger",
+    "VS Code",
+    "Notion / Confluence",
+    "Vale / Vale-compatible lint",
+    "Postman"
+  ],
+  "relatedRoleId": "technical-writer",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "Writing & Docs Foundations",
+      "goal": "Write task-oriented docs in Markdown, with structure a reader can scan",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Technical Writing Craft",
+          "topics": [
+            {
+              "title": "Plain language",
+              "items": [
+                "Active voice, short sentences, and one idea per paragraph",
+                "Procedures vs. concepts vs. reference — do not mix them in one page",
+                "Cutting jargon, or defining it the first time"
+              ]
+            },
+            {
+              "title": "Audience & jobs",
+              "items": [
+                "Who is this page for, and what are they trying to finish?",
+                "Beginner vs. expert readers; onboarding vs. lookup",
+                "Error messages, UI copy, and docs as one voice"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Information Architecture",
+          "topics": [
+            {
+              "title": "Findability",
+              "items": [
+                "Table of contents, headings, and page titles that match search",
+                "Task-oriented IA: getting started, how-to, reference, troubleshooting",
+                "When a page should split; when it should stay one screen"
+              ]
+            },
+            {
+              "title": "Structure of a how-to",
+              "items": [
+                "Prerequisites, numbered steps, expected result, next step",
+                "Screenshots and when they rot",
+                "Warnings, notes, and troubleshooting that is not a dump"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Docs-as-Code Basics",
+          "topics": [
+            {
+              "title": "Markdown & Git",
+              "items": [
+                "Headings, lists, links, code fences, and tables",
+                "Branches, PRs, and review comments on docs",
+                "Previewing locally so you do not ship broken links"
+              ]
+            },
+            {
+              "title": "Working in a docs repo",
+              "items": [
+                "File naming, folders, and front matter",
+                "Linking between pages without circular mazes",
+                "Style sheet: do/don't for the team"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Rewrite a confusing README into a task-oriented getting-started",
+        "How-to with numbered steps, prerequisites, and an expected result",
+        "IA map for a small product: getting started, how-tos, reference, troubleshooting",
+        "One-page style sheet (voice, terms, formatting) a teammate could follow"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Documenting Products & APIs",
+      "goal": "Document APIs and user workflows accurately by working with subject-matter experts",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "API Documentation",
+          "topics": [
+            {
+              "title": "OpenAPI & reference",
+              "items": [
+                "Reading an OpenAPI spec: paths, params, and error codes",
+                "Descriptions that say what and when, not only the type",
+                "Auth, pagination, idempotency, and rate limits in human language"
+              ]
+            },
+            {
+              "title": "Code samples",
+              "items": [
+                "Minimal working examples (curl, then one language)",
+                "Request/response that match the live API",
+                "Common errors and how to recover"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "User Guides & Onboarding",
+          "topics": [
+            {
+              "title": "Getting started",
+              "items": [
+                "Time-to-first-success: one happy path before every option",
+                "Accounts, keys, and sandbox vs. production",
+                "Checklists vs. narrative — pick for the job"
+              ]
+            },
+            {
+              "title": "Product how-tos",
+              "items": [
+                "Documenting a UI flow without screenshot rot",
+                "Permissions, roles, and 'you cannot see this because'",
+                "Release notes that a human can scan"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Working With Engineers",
+          "topics": [
+            {
+              "title": "SME interviews",
+              "items": [
+                "Prep: read the ticket, the PR, and the last doc",
+                "Questions that extract steps, not architecture lectures",
+                "Confirming facts: you write, they correct, you own the page"
+              ]
+            },
+            {
+              "title": "Accuracy & review",
+              "items": [
+                "Trying the steps yourself (Postman, CLI, or UI)",
+                "Review checklists: correctness, completeness, and tone",
+                "Tracking doc bugs the same way as product bugs"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Getting-started guide for a sample API (auth, one write, one read, one error)",
+        "OpenAPI descriptions and examples for five endpoints",
+        "User guide for a feature with roles, empty states, and a troubleshooting section",
+        "Interview an engineer (or a recorded talk), then write a page they will sign off as accurate"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Docs Systems at Scale",
+      "goal": "Run documentation as a product: style, versioning, contribution, and whether people succeed",
+      "duration": "8–10 wks",
+      "sections": [
+        {
+          "title": "Style, Voice & Contribution",
+          "topics": [
+            {
+              "title": "Style guides that stick",
+              "items": [
+                "Terminology, product names, and inclusive language",
+                "Linting (Vale) and PR templates for docs",
+                "Who can merge; who must review for accuracy"
+              ]
+            },
+            {
+              "title": "Contribution models",
+              "items": [
+                "Engineers as authors vs. writers as editors",
+                "Templates for how-tos, concepts, and API pages",
+                "Internal runbooks vs. customer docs — same craft, different audience"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Versioning & Releases",
+          "topics": [
+            {
+              "title": "Docs that match the product",
+              "items": [
+                "Versioning docs with API or app releases",
+                "Deprecations, breaking changes, and migration guides",
+                "Feature flags and 'this page is for the new flow'"
+              ]
+            },
+            {
+              "title": "Release communication",
+              "items": [
+                "Changelogs vs. release notes vs. migration guides",
+                "Support macros and docs staying in sync",
+                "Localization awareness: what does not translate"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Measuring Docs",
+          "topics": [
+            {
+              "title": "Effectiveness",
+              "items": [
+                "Search queries, bounce, and time-to-first-success",
+                "Support tickets that should have been a page",
+                "Feedback widgets without drowning in noise"
+              ]
+            },
+            {
+              "title": "Docs as a product",
+              "items": [
+                "Backlog, prioritization, and saying no to a wiki dump",
+                "On-call for docs: broken steps after a release",
+                "Ethics: security-sensitive procedures and what not to publish"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Docs site (Docusaurus or MkDocs) with IA, getting started, and API reference",
+        "Style guide plus contribution model and a PR template",
+        "Migration guide for a breaking API or UI change, versioned next to the old docs",
+        "Docs quality report: search/support evidence and three improvements you would ship first"
+      ]
+    }
+  ]
+}

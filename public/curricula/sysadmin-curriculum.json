@@ -1,0 +1,235 @@
+{
+  "id": "sysadmin",
+  "title": "Learn Systems Administration",
+  "tagline": "From first servers to reliable, automated infrastructure",
+  "description": "A three-level curriculum for systems administrators — provisioning and hardening Linux/Windows servers, managing identity and storage, and automating operations so systems stay patchable, observable, and recoverable.",
+  "prerequisites": [
+    "Comfortable with a terminal or PowerShell",
+    "Basic networking concepts (IP, DNS, ports)",
+    "Willingness to follow change control and document runbooks"
+  ],
+  "tools": [
+    "Linux (Ubuntu/RHEL)",
+    "Windows Server",
+    "Bash / PowerShell",
+    "Ansible",
+    "Terraform",
+    "Docker",
+    "systemd",
+    "Prometheus / Grafana",
+    "Active Directory / FreeIPA",
+    "NFS / SMB",
+    "Backup tools (Borg / Veeam)",
+    "Git"
+  ],
+  "relatedRoleId": "systems-administrator",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "Server Foundations",
+      "goal": "Administer a Linux (and basic Windows) server: users, packages, services, and backups",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Operating Systems",
+          "topics": [
+            {
+              "title": "Linux essentials",
+              "items": [
+                "Filesystem layout, permissions, and ownership",
+                "Users, groups, and sudo safely",
+                "Packages, updates, and service management with systemd"
+              ]
+            },
+            {
+              "title": "Windows Server basics",
+              "items": [
+                "Roles/features and Remote Desktop admin",
+                "Local users vs. domain-joined",
+                "Event Viewer for first-pass diagnostics"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Core Services",
+          "topics": [
+            {
+              "title": "Networking on the host",
+              "items": [
+                "Interfaces, routes, and DNS resolution",
+                "Firewalld/ufw/Windows Firewall basics",
+                "SSH hardening (keys, disable password where possible)"
+              ]
+            },
+            {
+              "title": "Storage & backups",
+              "items": [
+                "Disks, mounts, and LVM at a working level",
+                "Scheduled backups and restore drills",
+                "Retention and offsite copies"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Ops Hygiene",
+          "topics": [
+            {
+              "title": "Documentation & change",
+              "items": [
+                "Runbooks for reboot, patch, and restore",
+                "Change tickets for production hosts",
+                "Inventory of what you own"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Provision a Linux VM: users, SSH keys, firewall, and a web service",
+        "Automated nightly backup + documented restore test",
+        "Patch cycle runbook executed on a non-prod host",
+        "Host inventory sheet with owners and criticality"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Fleet & Identity",
+      "goal": "Manage multiple hosts with config management, directory services, and monitoring",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Automation",
+          "topics": [
+            {
+              "title": "Ansible (or equivalent)",
+              "items": [
+                "Inventories, playbooks, and idempotence",
+                "Roles for baseline hardening",
+                "Secrets handling without committing credentials"
+              ]
+            },
+            {
+              "title": "Containers for admins",
+              "items": [
+                "Running services in Docker safely",
+                "Volumes, networks, and restart policies",
+                "When VMs still win"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Identity & Access",
+          "topics": [
+            {
+              "title": "Directory services",
+              "items": [
+                "AD/FreeIPA concepts: users, groups, GPOs/policies",
+                "Centralized sudo and SSH access patterns",
+                "Service accounts and key rotation"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Observability & HA",
+          "topics": [
+            {
+              "title": "Monitoring",
+              "items": [
+                "Host metrics: CPU, memory, disk, and process health",
+                "Alerting that pages the right person",
+                "Log shipping and retention basics"
+              ]
+            },
+            {
+              "title": "Availability patterns",
+              "items": [
+                "Load balancing frontends",
+                "Failover and maintenance modes",
+                "Patching without long downtime"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Ansible baseline role applied to 3+ VMs",
+        "Central auth for SSH/sudo via directory or SSO pattern",
+        "Prometheus/Grafana (or equivalent) host dashboard + alerts",
+        "Zero/low-downtime patch window for a small HA pair"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Platform Administration",
+      "goal": "Design resilient, automated infrastructure with IaC, DR, and security baselines",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Infrastructure as Code",
+          "topics": [
+            {
+              "title": "Terraform & lifecycle",
+              "items": [
+                "Provisioning compute, network, and storage as code",
+                "State, workspaces, and reviewable changes",
+                "Drift detection and remediation"
+              ]
+            },
+            {
+              "title": "Golden images & scale",
+              "items": [
+                "Image pipelines (Packer or cloud images)",
+                "Immutable vs. mutable host strategies",
+                "Autoscaling groups and cattle not pets"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Resilience & Security",
+          "topics": [
+            {
+              "title": "Disaster recovery",
+              "items": [
+                "RTO/RPO definitions that match business need",
+                "DR drills with measured restore times",
+                "Backup encryption and access control"
+              ]
+            },
+            {
+              "title": "Hardening at scale",
+              "items": [
+                "CIS-style baselines and compliance evidence",
+                "Vulnerability scanning and patch SLAs",
+                "Privileged access management patterns"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Leadership",
+          "topics": [
+            {
+              "title": "Operating a platform",
+              "items": [
+                "On-call, runbooks, and blameless postmortems",
+                "Capacity and cost conversations with leadership",
+                "Handing self-service safely to application teams"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Terraform module set for a small environment (net + compute + DNS)",
+        "DR tabletop + timed restore of a critical service",
+        "Hardening baseline with automated compliance checks",
+        "On-call runbook pack and postmortem template for the team"
+      ]
+    }
+  ]
+}

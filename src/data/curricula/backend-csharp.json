@@ -1,0 +1,267 @@
+{
+  "id": "backend-csharp",
+  "title": "Learn Backend with C#",
+  "tagline": "ASP.NET Core APIs from first controller to production services",
+  "description": "A three-level curriculum for building backend services with C# and ASP.NET Core — from HTTP and SQL through authenticated APIs to systems you can test, cache, observe, and ship.",
+  "prerequisites": [
+    "Programming fundamentals in any language",
+    "Comfort using a terminal or Visual Studio / VS Code, plus Git",
+    "Willingness to install the .NET SDK and a local PostgreSQL (or SQL Server) instance"
+  ],
+  "tools": [
+    ".NET SDK",
+    "C#",
+    "ASP.NET Core",
+    "Entity Framework Core",
+    "PostgreSQL or SQL Server",
+    "Redis",
+    "xUnit",
+    "Swagger / OpenAPI",
+    "Docker",
+    "Git/GitHub"
+  ],
+  "relatedRoleId": "backend-engineer",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "HTTP, SQL & First APIs",
+      "goal": "Stand up a small HTTP API that reads and writes real data",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Language, HTTP & SQL Foundations",
+          "topics": [
+            {
+              "title": "C# for services",
+              "items": [
+                "Types, records, async/await, and nullability",
+                "Namespaces, projects, and solution structure",
+                "Error handling and structured logging (ILogger)"
+              ]
+            },
+            {
+              "title": "How the web talks",
+              "items": [
+                "HTTP methods, status codes, and headers",
+                "JSON request and response bodies",
+                "REST principles: resources, URLs, and idempotency"
+              ]
+            },
+            {
+              "title": "SQL & relational design",
+              "items": [
+                "Tables, primary keys, and foreign keys",
+                "SELECT, JOIN, WHERE, and GROUP BY",
+                "Indexes you actually need on day one"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Building a First Service",
+          "topics": [
+            {
+              "title": "ASP.NET Core basics",
+              "items": [
+                "Minimal APIs or controllers and routing",
+                "Dependency injection and configuration (appsettings)",
+                "Middleware pipeline and request logging"
+              ]
+            },
+            {
+              "title": "Talking to the database",
+              "items": [
+                "EF Core DbContext and entities",
+                "Parameterized queries (never string-concat SQL)",
+                "First migrations and update-database"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Local Tooling",
+          "topics": [
+            {
+              "title": "Git & API clients",
+              "items": [
+                "Branch, commit, and PR habits for backend teams",
+                "Swagger UI, Postman, or Bruno",
+                "Docker Compose for a local database"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "CRUD API for members or products with EF Core",
+        "Swagger docs covering every endpoint",
+        "Docker Compose so a teammate can run the API locally"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Authenticated, Tested Services",
+      "goal": "Ship APIs with auth, validation, migrations, and tests you trust",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Auth & Authorization",
+          "topics": [
+            {
+              "title": "Authentication",
+              "items": [
+                "ASP.NET Identity or JWT bearer auth",
+                "OAuth/OIDC at a working level",
+                "Refresh tokens, expiry, and logout"
+              ]
+            },
+            {
+              "title": "Authorization",
+              "items": [
+                "Policies, roles, and [Authorize]",
+                "Resource-based authorization",
+                "Least privilege for service accounts"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Data Modeling & Validation",
+          "topics": [
+            {
+              "title": "EF Core and migrations",
+              "items": [
+                "Fluent configuration and relationships",
+                "Forward-only migrations and careful rollbacks",
+                "Transactions for multi-step writes"
+              ]
+            },
+            {
+              "title": "Validation & errors",
+              "items": [
+                "Data annotations / FluentValidation",
+                "ProblemDetails and consistent error shapes",
+                "Idempotent creates for retries"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Testing the Backend",
+          "topics": [
+            {
+              "title": "xUnit and WebApplicationFactory",
+              "items": [
+                "Unit tests for domain logic",
+                "Integration tests against the real pipeline",
+                "Test database or Testcontainers"
+              ]
+            },
+            {
+              "title": "API contracts",
+              "items": [
+                "OpenAPI / Swagger as the source of truth",
+                "Contract tests for breaking changes",
+                "Seed data that matches production shapes"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Caching & Background Work",
+          "topics": [
+            {
+              "title": "Redis and hosted services",
+              "items": [
+                "IDistributedCache / Redis when it helps",
+                "IHostedService / BackgroundService for jobs",
+                "EXPLAIN and slow-query awareness"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "REST API with JWT auth, roles, and xUnit coverage",
+        "Migration-backed schema for a real feature",
+        "Rate-limited public endpoint with ProblemDetails errors"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Production-Grade Backend Systems",
+      "goal": "Design services that stay correct under load, retries, and money-moving traffic",
+      "duration": "8–10 wks",
+      "sections": [
+        {
+          "title": "Architecture & Messaging",
+          "topics": [
+            {
+              "title": "Service boundaries",
+              "items": [
+                "Clean/modular monolith vs. microservices",
+                "MediatR or similar for in-process commands",
+                "Outbox pattern for reliable side effects"
+              ]
+            },
+            {
+              "title": "Queues and workers",
+              "items": [
+                "MassTransit, Azure Service Bus, or SQS",
+                "Retries, dead-letter queues, and poison messages",
+                "Idempotency keys for at-least-once delivery"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Security & Money-Safe Writes",
+          "topics": [
+            {
+              "title": "API security",
+              "items": [
+                "Injection, mass assignment, and secrets in config",
+                "Rate limiting, CORS, and webhook signature verification",
+                "PII handling and audit logs"
+              ]
+            },
+            {
+              "title": "Ledger-style consistency",
+              "items": [
+                "Immutable ledger rows vs. mutable balances",
+                "Idempotent payment and transfer endpoints",
+                "Reconciliation when callbacks are late or duplicated"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Observability & Shipping",
+          "topics": [
+            {
+              "title": "Logs, metrics, traces",
+              "items": [
+                "OpenTelemetry in ASP.NET Core",
+                "Health checks and readiness probes",
+                "Correlation IDs across requests and jobs"
+              ]
+            },
+            {
+              "title": "Containers and config",
+              "items": [
+                "Multi-stage Docker images for .NET",
+                "Environment-based configuration and user secrets",
+                "CI with tests, migrations, and published OpenAPI"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "SACCO member and savings API with role-based access",
+        "Idempotent M-Pesa-style callback + reconciliation worker",
+        "Containerized ASP.NET Core service with CI and Swagger"
+      ]
+    }
+  ]
+}

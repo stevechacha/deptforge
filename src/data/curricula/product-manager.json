@@ -1,0 +1,301 @@
+{
+  "id": "product-manager",
+  "title": "Learn Product Management",
+  "tagline": "From problem briefs to shipped outcomes — decide what to build and why",
+  "description": "A three-level curriculum for Product Managers. Learn to frame problems, write requirements teams can build from, run discovery with design and engineering, and own outcomes with roadmaps, metrics, and experiments — not a backlog of features.",
+  "prerequisites": [
+    "Comfort writing clearly for other people (emails, briefs, or docs)",
+    "Willingness to talk to users and sit with incomplete information",
+    "Basic numeracy: percentages, trends, and reading a simple chart"
+  ],
+  "tools": [
+    "Linear / Jira",
+    "Notion",
+    "Figma (comment)",
+    "FigJam / Miro",
+    "Google Sheets",
+    "Amplitude / Mixpanel",
+    "Looker / Metabase",
+    "Slack",
+    "User interviews"
+  ],
+  "relatedRoleId": "product-manager",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "Product Foundations",
+      "goal": "Frame a problem, write requirements a team can build from, and prioritize a first backlog",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "What Product Managers Do",
+          "topics": [
+            {
+              "title": "The PM role",
+              "items": [
+                "Discovery vs. delivery — and why both are the job",
+                "PM vs. project manager vs. founder vs. designer",
+                "What you own: problem, outcome, and communication — not the code"
+              ]
+            },
+            {
+              "title": "How product teams work",
+              "items": [
+                "The trio: product, design, and engineering",
+                "Stakeholders: sales, support, ops, and leadership",
+                "A feature's path from idea to release"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Problems, Users & Evidence",
+          "topics": [
+            {
+              "title": "Problem statements",
+              "items": [
+                "Who hurts, how often, and what they do today",
+                "Problem vs. solution: keep the brief solution-agnostic",
+                "Opportunity size without fake TAM slides"
+              ]
+            },
+            {
+              "title": "Lightweight discovery",
+              "items": [
+                "Five customer conversations beat a survey of 200 strangers",
+                "Jobs to be done and the job-to-be-done interview",
+                "Shadowing support tickets and sales calls"
+              ]
+            },
+            {
+              "title": "Competitive & market awareness",
+              "items": [
+                "Teardown: flows, pricing, and what they optimize for",
+                "Substitutes (including spreadsheets and WhatsApp groups)",
+                "When to ignore competitors and when not to"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Requirements & Prioritization",
+          "topics": [
+            {
+              "title": "User stories & acceptance criteria",
+              "items": [
+                "As a / I want / so that — and when that template fails",
+                "Acceptance criteria that QA and engineering can test",
+                "Edge cases: empty, error, permission, and offline"
+              ]
+            },
+            {
+              "title": "Specs teams can use",
+              "items": [
+                "One-pager vs. PRD vs. ticket — pick the lightest that works",
+                "Scope: in, out, and later",
+                "Open questions and who will answer them"
+              ]
+            },
+            {
+              "title": "Prioritization",
+              "items": [
+                "Impact vs. effort, RICE, and MoSCoW",
+                "Must-haves vs. nice-to-haves for a first release",
+                "Saying no with a reason, not a delay"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Problem brief for a familiar product (mobile money, SACCO member app, or campus marketplace)",
+        "User stories and acceptance criteria for a small feature (e.g. bill-split or deposit confirmation)",
+        "Prioritized backlog of 10 items with a one-line rationale each",
+        "Competitive teardown of two similar products: flows, pricing, and what you would steal"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Shipping With Teams",
+      "goal": "Run discovery-to-delivery with design and engineering, and communicate a roadmap with trade-offs",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Agile & the Delivery Cadence",
+          "topics": [
+            {
+              "title": "Ceremonies that earn their time",
+              "items": [
+                "Sprint planning, standup, review, and retro — what each is for",
+                "Story points, capacity, and when estimates are theater",
+                "Definition of ready and definition of done"
+              ]
+            },
+            {
+              "title": "Unblocking the team",
+              "items": [
+                "Cutting scope mid-sprint without wrecking trust",
+                "Dependencies, blockers, and who owns the chase",
+                "Bugs vs. features: a simple triage rule"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Specs, Scope & Handoff",
+          "topics": [
+            {
+              "title": "Working with design",
+              "items": [
+                "Briefing a designer: problem, constraints, and success",
+                "Commenting in Figma without designing in the margins",
+                "Usability findings that change the spec"
+              ]
+            },
+            {
+              "title": "Working with engineering",
+              "items": [
+                "Technical constraints as product input, not a veto",
+                "API contracts, feature flags, and rollout plans",
+                "Estimates, spikes, and when to spike vs. build"
+              ]
+            },
+            {
+              "title": "Release communication",
+              "items": [
+                "Release notes for users vs. internal changelog",
+                "Go / no-go: quality, support readiness, and known issues",
+                "Rollback and what you tell customers if it fails"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Metrics in the Loop",
+          "topics": [
+            {
+              "title": "Product analytics basics",
+              "items": [
+                "Activation, retention, and a North Star that is not vanity",
+                "Event naming and funnels you can actually trust",
+                "Reading a dashboard without overfitting last week's dip"
+              ]
+            },
+            {
+              "title": "Experiments without overclaiming",
+              "items": [
+                "Hypothesis, metric, and guardrail before you ship a test",
+                "Sample size and why a 3-day test is usually noise",
+                "When a qualitative study beats an A/B test"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Stakeholders & Roadmaps",
+          "topics": [
+            {
+              "title": "Roadmaps that survive contact",
+              "items": [
+                "Now / next / later vs. dated Gantt fiction",
+                "Themes and outcomes, not a list of tickets",
+                "Communicating trade-offs to leadership"
+              ]
+            },
+            {
+              "title": "Stakeholder management",
+              "items": [
+                "Sales and support as discovery channels",
+                "Escalations: what is a bug, a request, and a strategy debate",
+                "Written updates that replace status meetings"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Full PRD for a new feature (problem, users, scope, AC, analytics, risks)",
+        "Two-week sprint plan plus retro notes for a mock team",
+        "Now/next/later roadmap slide with three explicit trade-offs for leadership",
+        "Spec a KYC, checkout, or M-Pesa collection flow including empty, error, and retry states"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Strategy, Outcomes & Influence",
+      "goal": "Own outcomes, not output — strategy, experiments, and decisions that survive scrutiny",
+      "duration": "8–10 wks",
+      "sections": [
+        {
+          "title": "Product Strategy",
+          "topics": [
+            {
+              "title": "Strategy that is not a slogan",
+              "items": [
+                "Where to play, how to win, and what you will not do",
+                "Connecting company goals to a product area",
+                "Kill criteria: when a bet is over"
+              ]
+            },
+            {
+              "title": "Portfolio & sequencing",
+              "items": [
+                "Bets vs. hygiene vs. keep-the-lights-on",
+                "Platform work vs. customer-facing work",
+                "Sequencing: what must be true before the next bet"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Growth, Retention & Decision Quality",
+          "topics": [
+            {
+              "title": "Loops and funnels",
+              "items": [
+                "Acquisition, activation, retention, referral, revenue (when each applies)",
+                "Cohorts and why last-week totals lie",
+                "Pricing, packaging, and willingness to pay at a working level"
+              ]
+            },
+            {
+              "title": "Experiment systems",
+              "items": [
+                "Experiment briefs, holdouts, and peeking",
+                "Feature flags as product, not only as engineering",
+                "Post-ship reviews: what we learned, not just what we launched"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Influence & Ethics",
+          "topics": [
+            {
+              "title": "Decision-grade communication",
+              "items": [
+                "Options, recommendation, and what you would need to change your mind",
+                "Executive vs. operator audiences",
+                "Writing that survives a 15-minute read"
+              ]
+            },
+            {
+              "title": "Ethics & constraints",
+              "items": [
+                "Dark patterns, consent, and data you should not collect",
+                "Accessibility and inclusion as product requirements",
+                "Regulatory and payments constraints (KYC, AML, consumer protection) as design input"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Strategy memo plus a two-quarter roadmap with kill criteria",
+        "Experiment design for an activation or retention bet (hypothesis, metric, sample, guardrails)",
+        "KPI tree and dashboard brief for a product area (e.g. collections, active members, or onboarding)",
+        "Stakeholder readout with a recommendation, alternatives, and limitations"
+      ]
+    }
+  ]
+}

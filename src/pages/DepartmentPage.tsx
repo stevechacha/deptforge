@@ -1,11 +1,19 @@
 import { Link, useParams } from 'react-router-dom'
-import { DEPT_INDEX } from '../lib/catalog'
+import { COURSES } from '../data/curricula'
+import { DEPT_INDEX, ROLE_INDEX } from '../lib/catalog'
 import { NotFoundPage } from './NotFoundPage'
 
 export function DepartmentPage() {
   const { deptId } = useParams()
   const dept = deptId ? DEPT_INDEX[deptId] : undefined
   if (!dept) return <NotFoundPage />
+
+  const deptCourses = COURSES.filter((course) => {
+    const role = course.relatedRoleId
+      ? ROLE_INDEX[course.relatedRoleId]
+      : undefined
+    return role?.deptId === dept.id
+  })
 
   return (
     <div className="wrap section pb-6 pt-16">
@@ -44,6 +52,26 @@ export function DepartmentPage() {
           </div>
         ) : null}
       </div>
+
+      {deptCourses.length > 0 && (
+        <div className="pathway-strip mb-11 mt-0">
+          <p>
+            <strong>Full curricula for this department.</strong> Level-by-level
+            outlines you can download as PDF, Markdown, or JSON.
+          </p>
+          <div className="flex flex-wrap gap-3">
+            {deptCourses.map((course) => (
+              <Link
+                key={course.id}
+                to={`/courses/${course.id}`}
+                className="btn ghost"
+              >
+                {course.title} →
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="mb-0 flex flex-wrap items-end justify-between gap-3.5">
         <h2 className="m-0 text-xl font-semibold">Roles in this department</h2>

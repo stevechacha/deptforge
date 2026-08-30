@@ -1,0 +1,269 @@
+{
+  "id": "soc",
+  "title": "Learn Security Operations",
+  "tagline": "Detect, triage, and respond — calmly and by the book",
+  "description": "A three-level curriculum for Security Analysts in a SOC. Learn monitoring, alert triage, investigation, and incident response with a defensive, privacy-aware mindset — operating only within authorized environments and documented playbooks.",
+  "prerequisites": [
+    "Basic networking (IP, DNS, HTTP) and OS familiarity (Windows and Linux)",
+    "Comfort reading logs and using a command line",
+    "Commitment to privacy, least privilege, and authorized access only"
+  ],
+  "tools": [
+    "SIEM (e.g. Splunk / Elastic / Microsoft Sentinel)",
+    "EDR / XDR",
+    "SOAR / playbooks",
+    "Wireshark / packet capture basics",
+    "Ticketing (Jira / ServiceNow)",
+    "MITRE ATT&CK",
+    "Threat intel platforms",
+    "Python / Bash for light automation",
+    "Git"
+  ],
+  "relatedRoleId": "security-analyst",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "SOC Foundations & Triage",
+      "goal": "Triage alerts correctly and escalate with clear, complete notes",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Mission, Ethics & Access",
+          "topics": [
+            {
+              "title": "Authorized operations",
+              "items": [
+                "Only investigate systems and data you are cleared to access",
+                "Handling PII and customer data with need-to-know",
+                "Escalation paths and when not to act alone"
+              ]
+            },
+            {
+              "title": "SOC structure",
+              "items": [
+                "L1/L2/L3 responsibilities and handoffs",
+                "Shift hygiene: tickets, runbooks, and status updates",
+                "False positives vs. true positives vs. benign true positives"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Telemetry & ATT&CK Basics",
+          "topics": [
+            {
+              "title": "Where signals come from",
+              "items": [
+                "Endpoint, identity, network, cloud, and app logs",
+                "Time sync, retention, and log completeness gaps",
+                "Reading a raw event and extracting who/what/when/where"
+              ]
+            },
+            {
+              "title": "MITRE ATT&CK intro",
+              "items": [
+                "Tactics vs. techniques vs. procedures",
+                "Mapping a simple alert to an ATT&CK technique",
+                "Using ATT&CK for questions, not buzzwords"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Alert Triage Practice",
+          "topics": [
+            {
+              "title": "Triage workflow",
+              "items": [
+                "Validate the alert, check context, decide: close / monitor / escalate",
+                "Writing investigation notes another analyst can continue",
+                "Customer-safe language in tickets"
+              ]
+            },
+            {
+              "title": "Common starter alert types",
+              "items": [
+                "Failed logons and impossible travel (high-level)",
+                "Malware / EDR detections and quarantine awareness",
+                "Phishing reports: headers, links, and safe handling"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Build a personal triage checklist for five common alert types",
+        "Map ten sample alerts to MITRE ATT&CK techniques",
+        "Write a complete L1 ticket for a simulated phishing report",
+        "Document a shift handoff note that another analyst can act on"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Investigation & Detection Engineering",
+      "goal": "Investigate multi-source incidents and improve detections responsibly",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Deep Investigation",
+          "topics": [
+            {
+              "title": "Correlating evidence",
+              "items": [
+                "Joining identity, endpoint, and network timelines",
+                "Process trees, parent/child anomalies, and living-off-the-land clues",
+                "Preserving evidence and chain-of-custody basics"
+              ]
+            },
+            {
+              "title": "Case narrative",
+              "items": [
+                "Building a timeline stakeholders can trust",
+                "Hypotheses, confirmation, and documenting uncertainty",
+                "When to involve IR, legal, or engineering"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "SIEM & Query Craft",
+          "topics": [
+            {
+              "title": "Effective searching",
+              "items": [
+                "Scoped queries: time, host, user, and hash filters",
+                "Avoiding noisy queries that overload the platform",
+                "Saved searches and dashboards for shift work"
+              ]
+            },
+            {
+              "title": "Detection quality",
+              "items": [
+                "Tuning thresholds and allowlists with change control",
+                "Measuring precision/recall tradeoffs in plain language",
+                "Peer review for new correlation rules"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Threat Intel & Phishing Ops",
+          "topics": [
+            {
+              "title": "Using intel defensively",
+              "items": [
+                "IOCs as hypotheses, not automatic blocks",
+                "Enrichment: reputation, geo, and malware family context",
+                "Sharing intel within policy (TLP / internal guidelines)"
+              ]
+            },
+            {
+              "title": "Email & identity abuse",
+              "items": [
+                "Mailbox rules, forwarding, and OAuth consent risks",
+                "MFA fatigue and session theft indicators",
+                "Containment steps that minimize user disruption"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Automation with Guardrails",
+          "topics": [
+            {
+              "title": "SOAR & scripts",
+              "items": [
+                "Playbooks for enrichment and notification — not blind remediation",
+                "Human approval gates for high-impact actions",
+                "Light Python/Bash to speed repetitive, safe lookups"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Investigate a multi-log simulated intrusion and write a full case report",
+        "Author and peer-review a SIEM detection with tuning notes",
+        "Design a phishing response playbook with containment checkpoints",
+        "Build a safe enrichment automation (lookup only) for a common IOC type"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Incident Response & SOC Leadership",
+      "goal": "Lead major incidents and raise the SOC’s detection and response maturity",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Incident Response Leadership",
+          "topics": [
+            {
+              "title": "IR lifecycle",
+              "items": [
+                "Prepare, detect, contain, eradicate, recover, lessons learned",
+                "War-room roles, communications, and executive updates",
+                "Legal hold, privacy, and external notification awareness"
+              ]
+            },
+            {
+              "title": "Tabletops & readiness",
+              "items": [
+                "Running tabletop exercises with realistic constraints",
+                "Measuring MTTD/MTTR without gaming the metrics",
+                "After-action reports that drive concrete backlog work"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Advanced Detection Strategy",
+          "topics": [
+            {
+              "title": "Coverage mapping",
+              "items": [
+                "ATT&CK coverage heatmaps tied to telemetry you actually have",
+                "Closing blind spots with engineering partners",
+                "Purple-team style validation of detections (authorized)"
+              ]
+            },
+            {
+              "title": "Cloud & identity focus",
+              "items": [
+                "Cloud audit logs and control-plane anomalies",
+                "Privileged identity monitoring and just-in-time access signals",
+                "Detecting ransomware precursors without relying on one tool"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Program & People",
+          "topics": [
+            {
+              "title": "Operating a healthy SOC",
+              "items": [
+                "Runbook libraries, knowledge management, and onboarding",
+                "Burnout, rotation, and quality over alert volume",
+                "Vendor tool evaluation with detection outcomes, not slideware"
+              ]
+            },
+            {
+              "title": "Continuous improvement",
+              "items": [
+                "Feedback loops from IR back into detections and hardening",
+                "SLA design for critical vs. informational queues",
+                "Reporting risk to leadership in business terms"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Facilitate a ransomware tabletop and publish an after-action report",
+        "Produce an ATT&CK coverage map with a 90-day closing plan",
+        "Rewrite the major-incident communications template for execs and customers",
+        "Design an L1→L2 career skills matrix and training plan for the SOC"
+      ]
+    }
+  ]
+}

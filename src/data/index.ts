@@ -7,4 +7,4 @@ export type {
   CurriculumTopic,
 } from './curriculum-types'
 export { DEPARTMENTS } from './departments'
-export { COURSES, REACT_COURSE } from './curricula'
+export { COURSES, getCourse } from './curricula'

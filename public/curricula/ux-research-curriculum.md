@@ -1,0 +1,194 @@
+# Learn UX Research
+
+> From a research question to insights that change what the team builds
+
+A three-level curriculum for UX Researchers. Learn to plan ethical studies, run interviews and usability tests, then synthesize findings into decisions — so the team spends months on the right problem, not a polished guess.
+
+## Prerequisites
+
+- Comfort talking to strangers and writing clearly afterward
+- Willingness to sit with messy qualitative data
+- Curiosity about why people do what they do, not only what they click
+
+## Tools & Technologies
+
+- FigJam / Miro
+- Figma (prototypes)
+- Lookback / UserTesting / Maze
+- Typeform / Google Forms
+- Notion
+- Dovetail / Airtable
+- Spreadsheet / Sheets
+- Zoom / Meet
+
+---
+
+## Research Foundations — Beginner
+
+**Goal:** Write a research plan, a discussion guide, and recruit without biasing the sample into nonsense
+**Duration:** 4–6 wks
+
+### What Research Is For
+
+#### Qual vs. quantitative
+
+- When to interview, test, survey, or wait for analytics
+- Generative vs. evaluative research
+- Research questions vs. product questions vs. interview questions
+
+#### Ethics & bias
+
+- Informed consent, recording, and storing notes
+- Leading questions, social desirability, and the HiPPO
+- Who is missing from the sample (and why that matters)
+
+### Planning a Study
+
+#### Research plans
+
+- Background, decisions the study must inform, and out of scope
+- Method choice and sample size that match the decision
+- Timeline, risks, and how findings will be used
+
+#### Discussion guides
+
+- Warm-up, past behavior, then tasks — not a questionnaire out loud
+- Open vs. closed questions; probes that do not lead
+- Pilot the guide on a colleague before real participants
+
+### Recruiting
+
+#### Who to talk to
+
+- Screeners that filter for relevant experience
+- Customers vs. prospects vs. internal users
+- Incentives, no-shows, and scheduling
+
+#### Logistics
+
+- Remote vs. in-person; recording setup
+- NDAs and when they get in the way
+- Working with PMs and designers on the brief without letting them rewrite the guide
+
+### Project Work
+
+- Research plan for a real product question (e.g. why deposits stall, or why onboarding drops)
+- Discussion guide for five interviews, piloted and revised
+- Recruiting screener for a target segment
+- Bias audit of a bad survey or leading interview script — rewrite it
+
+---
+
+## Running Studies — Intermediate
+
+**Goal:** Run interviews, usability tests, and surveys that produce evidence, not quotes you already wanted
+**Duration:** 6–8 wks
+
+### Interviews & Fieldwork
+
+#### Conducting interviews
+
+- Rapport, silence, and following the unexpected
+- Past behavior over hypothetical futures
+- Note-taking vs. recording; not interviewing and synthesizing at once
+
+#### Contextual & diary methods
+
+- When a sit-along or shop-along beats a Zoom
+- Short diary studies for habits (payments, commuting, care work)
+- Photos, artifacts, and what people actually use (WhatsApp, paper, Excel)
+
+### Usability Testing
+
+#### Task-based tests
+
+- Tasks that match real jobs, not a tour of the UI
+- Think-aloud, when to stay quiet, and when to help
+- Moderated vs. unmoderated; prototype vs. live
+
+#### Heuristics & expert review
+
+- Nielsen-style heuristics as a first pass, not a study
+- Severity ratings that engineering can sequence
+- When five users is enough — and when it is not
+
+### Surveys & Mixed Signals
+
+#### Survey design
+
+- One construct per question; avoid double-barreled items
+- Scales, skip logic, and sample you can describe
+- Satisfaction scores (CSAT/NPS) and what they cannot tell you
+
+#### Working with analytics
+
+- Using funnels to pick who to interview
+- Qual explaining a drop-off; quant sizing it
+- Not fishing for a quote that matches the chart
+
+### Project Work
+
+- Five user interviews with session notes and a short highlight reel of themes
+- Moderated usability test (five participants) on a Figma prototype or live flow
+- Survey with a clean codebook and a one-page findings summary
+- Heuristic evaluation of a payments, KYC, or member-portal flow with severity ratings
+
+---
+
+## Synthesis, Influence & Research Ops — Expert
+
+**Goal:** Turn studies into decisions, and build a research practice the org will actually use
+**Duration:** 8–10 wks
+
+### Synthesis
+
+#### From notes to themes
+
+- Affinity mapping and thematic analysis without boiling the ocean
+- Evidence: quote, behavior, and how many people
+- Disconfirming evidence and outlier stories
+
+#### Artifacts that travel
+
+- Personas only when they change a decision
+- Journey maps and service blueprints when the work is cross-team
+- Opportunity areas tied to product bets, not a wall of stickies
+
+### Influence
+
+#### Readouts that change the roadmap
+
+- Decision, evidence, recommendation, and what is still unknown
+- Workshop vs. slide deck vs. memo — pick for the audience
+- Pushback: when stakeholders wanted validation, not learning
+
+#### Partnering with PM, design & data
+
+- Research in discovery vs. research as a gate before launch
+- Sharing raw notes vs. synthesized insight
+- Joint studies with data analysts (survey + events + interviews)
+
+### Research Ops & Rigor
+
+#### A research practice
+
+- Repositories, tagging, and not repeating last quarter's study
+- Participant panels and recruiting ops
+- Quality bar: what 'good enough' is for a two-week sprint
+
+#### Quant literacy for researchers
+
+- Sample, bias, and confidence at a working level
+- Significance vs. practical importance
+- Ethics at scale: PII, vulnerable users, and what not to record
+
+### Project Work
+
+- Full study: plan → recruit → sessions → synthesis → readout that names a product decision
+- Journey map plus opportunity areas for a high-stakes flow (onboarding, collections, or claims)
+- Lightweight research repository of three studies with tags a PM can search
+- Stakeholder workshop that ends in a recorded decision, not a parking lot
+
+---
+
+_Generated from Deptforge curriculum data. Visit the site for the latest version._

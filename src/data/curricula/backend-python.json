@@ -1,0 +1,268 @@
+{
+  "id": "backend-python",
+  "title": "Learn Backend with Python",
+  "tagline": "FastAPI or Django APIs from first route to production services",
+  "description": "A three-level curriculum for building backend services with Python — from HTTP and SQL through authenticated APIs to systems you can test, cache, observe, and ship. FastAPI is the primary path; Django/DRF patterns are covered where they differ.",
+  "prerequisites": [
+    "Programming fundamentals (variables, functions, collections)",
+    "Comfort using a terminal, Git, and a code editor",
+    "Willingness to install Python 3.11+, pip/uv, and a local PostgreSQL instance"
+  ],
+  "tools": [
+    "Python 3",
+    "FastAPI or Django REST Framework",
+    "Pydantic",
+    "SQLAlchemy or Django ORM",
+    "Alembic or Django migrations",
+    "PostgreSQL",
+    "Redis",
+    "Celery or RQ",
+    "pytest",
+    "Docker",
+    "Git/GitHub"
+  ],
+  "relatedRoleId": "backend-engineer",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "HTTP, SQL & First APIs",
+      "goal": "Stand up a small HTTP API that reads and writes real data",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Language, HTTP & SQL Foundations",
+          "topics": [
+            {
+              "title": "Python for services",
+              "items": [
+                "Typing, dataclasses, async/await, and packages",
+                "Virtual environments (venv/uv) and dependency files",
+                "Error handling, logging, and project layout"
+              ]
+            },
+            {
+              "title": "How the web talks",
+              "items": [
+                "HTTP methods, status codes, and headers",
+                "JSON request and response bodies",
+                "REST principles: resources, URLs, and idempotency"
+              ]
+            },
+            {
+              "title": "SQL & relational design",
+              "items": [
+                "Tables, primary keys, and foreign keys",
+                "SELECT, JOIN, WHERE, and GROUP BY",
+                "Indexes you actually need on day one"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Building a First Service",
+          "topics": [
+            {
+              "title": "Framework basics",
+              "items": [
+                "FastAPI routes, path/query params, and dependency injection",
+                "Pydantic models for request/response schemas",
+                "Alternative path: Django views/serializers at a glance"
+              ]
+            },
+            {
+              "title": "Talking to PostgreSQL",
+              "items": [
+                "SQLAlchemy (or Django ORM) with parameterized queries",
+                "Sessions, engines, and connection pooling basics",
+                "First migrations with Alembic or Django"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Local Tooling",
+          "topics": [
+            {
+              "title": "Git & API clients",
+              "items": [
+                "Branch, commit, and PR habits for backend teams",
+                "Exploring endpoints with Postman, Bruno, or httpx",
+                "Docker Compose for a local Postgres"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "CRUD API for members or products with Postgres",
+        "OpenAPI docs (FastAPI auto-docs or DRF schema)",
+        "Docker Compose so a teammate can run the API locally"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Authenticated, Tested Services",
+      "goal": "Ship APIs with auth, validation, migrations, and tests you trust",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Auth & Authorization",
+          "topics": [
+            {
+              "title": "Authentication",
+              "items": [
+                "Password hashing (passlib/argon2) and sessions vs. JWT",
+                "OAuth/OIDC at a working level",
+                "Refresh tokens, expiry, and logout"
+              ]
+            },
+            {
+              "title": "Authorization",
+              "items": [
+                "Role-based dependencies or permission classes",
+                "Resource ownership checks",
+                "Least privilege for service accounts"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Data Modeling & Migrations",
+          "topics": [
+            {
+              "title": "ORM and schema change",
+              "items": [
+                "Models mapped to tables without leaking SQL injection",
+                "Forward-only migrations and careful rollbacks",
+                "Transactions for multi-step writes"
+              ]
+            },
+            {
+              "title": "Validation & errors",
+              "items": [
+                "Pydantic (or DRF serializers) at the boundary",
+                "Consistent error shapes and HTTP status mapping",
+                "Idempotent creates for retries"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Testing the Backend",
+          "topics": [
+            {
+              "title": "pytest for APIs",
+              "items": [
+                "Unit tests for domain logic",
+                "TestClient / AsyncClient against the app",
+                "Fixtures and a disposable test database"
+              ]
+            },
+            {
+              "title": "API contracts",
+              "items": [
+                "OpenAPI as the source of truth",
+                "Contract tests for breaking changes",
+                "Seed data that matches production shapes"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Caching & Jobs Basics",
+          "topics": [
+            {
+              "title": "Redis and workers",
+              "items": [
+                "When to cache vs. when to fix the query",
+                "Celery/RQ job enqueue for slow work",
+                "EXPLAIN and slow-query awareness"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "REST API with JWT/session auth, roles, and pytest coverage",
+        "Migration-backed schema for a real feature",
+        "Background job that processes a webhook payload"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Production-Grade Backend Systems",
+      "goal": "Design services that stay correct under load, retries, and money-moving traffic",
+      "duration": "8–10 wks",
+      "sections": [
+        {
+          "title": "Architecture & Messaging",
+          "topics": [
+            {
+              "title": "Service boundaries",
+              "items": [
+                "Monolith vs. modular packages vs. services",
+                "Synchronous APIs vs. async workers",
+                "Outbox pattern for reliable side effects"
+              ]
+            },
+            {
+              "title": "Queues and workers",
+              "items": [
+                "Celery/RQ/SQS retries and dead-letter queues",
+                "Idempotency keys for at-least-once delivery",
+                "Poison message handling"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Security & Money-Safe Writes",
+          "topics": [
+            {
+              "title": "API security",
+              "items": [
+                "Injection, mass assignment, and secrets in env",
+                "Rate limiting, CORS, and webhook signature verification",
+                "PII handling and audit logs"
+              ]
+            },
+            {
+              "title": "Ledger-style consistency",
+              "items": [
+                "Immutable ledger rows vs. mutable balances",
+                "Idempotent payment and transfer endpoints",
+                "Reconciliation when callbacks are late or duplicated"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Observability & Shipping",
+          "topics": [
+            {
+              "title": "Logs, metrics, traces",
+              "items": [
+                "Structured logging with request IDs",
+                "Prometheus metrics or OpenTelemetry",
+                "Tracing across handlers and workers"
+              ]
+            },
+            {
+              "title": "Containers and config",
+              "items": [
+                "Multi-stage Docker images and non-root users",
+                "12-factor config and graceful shutdown (uvicorn/gunicorn)",
+                "Health checks and migrations in CI"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "SACCO member and savings API with role-based access",
+        "Idempotent M-Pesa-style callback + reconciliation worker",
+        "Containerized FastAPI/Django service with CI pytest and OpenAPI"
+      ]
+    }
+  ]
+}

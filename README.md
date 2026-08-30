@@ -72,7 +72,9 @@ Upload everything inside `dist/` to your web root. The build copies `hosting/.ht
 
 ## Curricula
 
-Full course outlines live in `src/data/curricula/` (`react.json` is the source file; TypeScript re-exports it). Run `npm run export-curricula` to write static JSON and Markdown files to `public/curricula/` for direct download links.
+Full course outlines live in `src/data/curricula/` (one JSON file per course; TypeScript re-exports it). Every role has a downloadable curriculum (29 courses total — Mobile has both Android and iOS). Curricula are JSON files in `src/data/curricula/`; `index.ts` loads them via `import.meta.glob`. Run `npm run export-curricula` to write static JSON and Markdown to `public/curricula/`.
+
+Course pages also offer a **PDF download** (jsPDF) with a diagonal `deptforge.wesacco.com` watermark and footer on every page — see `src/lib/curriculum-pdf.ts` and `src/lib/site.ts`.
 
 ## Reference
 

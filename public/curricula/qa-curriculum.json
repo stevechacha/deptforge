@@ -1,0 +1,241 @@
+{
+  "id": "qa",
+  "title": "Learn QA",
+  "tagline": "From exploratory checks to disciplined quality ownership",
+  "description": "A three-level curriculum for QA engineers — learning to find defects early, design solid test cases, run regression with confidence, and partner with engineering on risk-based quality for web and API products.",
+  "prerequisites": [
+    "Comfort using browsers and common desktop apps",
+    "Basic understanding of how websites and APIs work",
+    "Willingness to write clear bug reports and follow checklists"
+  ],
+  "tools": [
+    "Chrome DevTools",
+    "Postman",
+    "Jira / Linear",
+    "TestRail / Zephyr",
+    "Charles / Proxyman",
+    "BrowserStack / Sauce Labs",
+    "Git",
+    "SQL (read queries)",
+    "Swagger / OpenAPI",
+    "Confluence / Notion"
+  ],
+  "relatedRoleId": "qa-engineer",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "QA Foundations",
+      "goal": "Comfortable exploring products, writing clear bugs, and executing basic test cases",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Quality Mindset",
+          "topics": [
+            {
+              "title": "What QA owns",
+              "items": [
+                "Verification vs. validation",
+                "Severity vs. priority",
+                "Shift-left and when to stop testing"
+              ]
+            },
+            {
+              "title": "Bug reporting",
+              "items": [
+                "Repro steps, expected vs. actual, and environment",
+                "Screenshots, logs, and network captures",
+                "Triaging duplicates and incomplete reports"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Manual Testing Basics",
+          "topics": [
+            {
+              "title": "Test case design",
+              "items": [
+                "Happy path, edge cases, and negative tests",
+                "Equivalence partitioning and boundary values",
+                "Traceability from requirements to cases"
+              ]
+            },
+            {
+              "title": "Exploratory testing",
+              "items": [
+                "Charters and time-boxed sessions",
+                "Note-taking that turns into actionable bugs",
+                "Heuristics (CRUD, auth, permissions, empty states)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Web & API Smoke Checks",
+          "topics": [
+            {
+              "title": "Browser testing",
+              "items": [
+                "Forms, navigation, and responsive layouts",
+                "DevTools console and network tab basics",
+                "Cross-browser smoke on Chrome, Safari, and Firefox"
+              ]
+            },
+            {
+              "title": "API smoke with Postman",
+              "items": [
+                "GET/POST requests and status codes",
+                "Reading OpenAPI/Swagger docs",
+                "Saving a small collection for a feature"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Write and execute a test suite for a login + signup flow",
+        "File 10 well-structured bugs against a sample web app",
+        "Exploratory charter report for a checkout or booking flow",
+        "Postman collection covering CRUD on a public sample API"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Structured Quality Engineering",
+      "goal": "Plan releases, own regression, and test integrations with measurable coverage",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Test Strategy",
+          "topics": [
+            {
+              "title": "Planning & risk",
+              "items": [
+                "Test plans vs. test cases",
+                "Risk-based prioritization",
+                "Entry/exit criteria and go/no-go signals"
+              ]
+            },
+            {
+              "title": "Regression & release support",
+              "items": [
+                "Smoke, sanity, and full regression suites",
+                "Release checklists and known-issue tracking",
+                "Partnering with product on accept/reject"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "API & Data Testing",
+          "topics": [
+            {
+              "title": "API depth",
+              "items": [
+                "Auth headers, tokens, and role-based access",
+                "Contract checks against OpenAPI schemas",
+                "Idempotency, pagination, and error payloads"
+              ]
+            },
+            {
+              "title": "Data & environments",
+              "items": [
+                "Test data setup and teardown",
+                "SQL reads to verify persistence",
+                "Staging vs. production-like environments"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Non-Functional Awareness",
+          "topics": [
+            {
+              "title": "Usability, a11y, and compatibility",
+              "items": [
+                "Keyboard navigation and basic WCAG checks",
+                "Mobile web and device-lab smoke",
+                "Localization and timezone edge cases"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "End-to-end test plan for a multi-step feature release",
+        "API regression suite (Postman) with auth and negative cases",
+        "Cross-browser matrix report with risk-ranked findings",
+        "Release readiness checklist used on a mock sprint release"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Quality Leadership",
+      "goal": "Define quality strategy, coach teams, and reduce escaped defects systematically",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Quality Systems",
+          "topics": [
+            {
+              "title": "Metrics that matter",
+              "items": [
+                "Escape rate, reopen rate, and cycle time",
+                "Coverage as risk reduction, not vanity counts",
+                "Dashboards for engineering and product"
+              ]
+            },
+            {
+              "title": "Process design",
+              "items": [
+                "Definition of Done that includes test evidence",
+                "Bug SLAs and severity rubrics",
+                "Root-cause analysis after production incidents"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Advanced Techniques",
+          "topics": [
+            {
+              "title": "Specialized testing",
+              "items": [
+                "Security-minded checks (authZ, injection surfaces) at a QA level",
+                "Chaos and failure-mode exploratory sessions",
+                "Production monitoring signals that feed back into test design"
+              ]
+            },
+            {
+              "title": "Automation partnership",
+              "items": [
+                "What to automate vs. keep manual",
+                "Reviewing automation PRs for coverage gaps",
+                "Flake triage and CI gate ownership"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Influence",
+          "topics": [
+            {
+              "title": "Working across teams",
+              "items": [
+                "Quality coaching for developers",
+                "Stakeholder communication under release pressure",
+                "Building a reusable QA playbook"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Quality strategy doc for a product area with metrics and gates",
+        "Post-incident RCA with preventive test additions",
+        "QA playbook (severity rubric, DoD, release checklist)",
+        "Automation ROI review: propose what to automate next quarter"
+      ]
+    }
+  ]
+}

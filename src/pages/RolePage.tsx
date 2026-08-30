@@ -38,13 +38,21 @@ export function RolePage() {
       {relatedCourses.length > 0 && (
         <div className="pathway-strip mt-8">
           <p>
-            <strong>Want the full curriculum?</strong> We have a downloadable,
-            level-by-level course outline for this path — topics, projects, and
+            <strong>Want the full curriculum?</strong> Downloadable,
+            level-by-level course outlines for this path — topics, projects, and
             JSON/Markdown exports.
           </p>
-          <Link to={`/courses/${relatedCourses[0].id}`} className="btn ghost">
-            View {relatedCourses[0].title} →
-          </Link>
+          <div className="flex flex-wrap gap-3">
+            {relatedCourses.map((course) => (
+              <Link
+                key={course.id}
+                to={`/courses/${course.id}`}
+                className="btn ghost"
+              >
+                View {course.title} →
+              </Link>
+            ))}
+          </div>
         </div>
       )}
 

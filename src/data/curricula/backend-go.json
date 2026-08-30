@@ -1,0 +1,266 @@
+{
+  "id": "backend-go",
+  "title": "Learn Backend with Go",
+  "tagline": "Idiomatic Go APIs from first handler to production services",
+  "description": "A three-level curriculum for building backend services with Go — from HTTP and SQL through authenticated APIs to systems you can test, cache, observe, and ship. Focus on the standard library plus a small, production-oriented toolkit.",
+  "prerequisites": [
+    "Programming fundamentals in any language",
+    "Comfort using a terminal, Git, and a code editor",
+    "Willingness to install Go and a local PostgreSQL instance"
+  ],
+  "tools": [
+    "Go",
+    "net/http or chi / Echo / Fiber",
+    "database/sql or sqlc / pgx",
+    "PostgreSQL",
+    "Redis",
+    "golang-migrate",
+    "testify",
+    "Docker",
+    "Git/GitHub"
+  ],
+  "relatedRoleId": "backend-engineer",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "HTTP, SQL & First APIs",
+      "goal": "Stand up a small HTTP API that reads and writes real data",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Language, HTTP & SQL Foundations",
+          "topics": [
+            {
+              "title": "Go for services",
+              "items": [
+                "Packages, structs, interfaces, and error returns",
+                "goroutines awareness without premature concurrency",
+                "go.mod, go fmt, and project layout"
+              ]
+            },
+            {
+              "title": "How the web talks",
+              "items": [
+                "HTTP methods, status codes, and headers",
+                "JSON encoding/decoding",
+                "REST principles: resources, URLs, and idempotency"
+              ]
+            },
+            {
+              "title": "SQL & relational design",
+              "items": [
+                "Tables, primary keys, and foreign keys",
+                "SELECT, JOIN, WHERE, and GROUP BY",
+                "Indexes you actually need on day one"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Building a First Service",
+          "topics": [
+            {
+              "title": "Handlers and routing",
+              "items": [
+                "net/http ServeMux or a light router (chi/Echo)",
+                "Context, timeouts, and middleware",
+                "Structured logging (slog or zerolog)"
+              ]
+            },
+            {
+              "title": "Talking to PostgreSQL",
+              "items": [
+                "database/sql or pgx with parameterized queries",
+                "sqlc for type-safe queries (optional but recommended)",
+                "Migrations with golang-migrate or goose"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Local Tooling",
+          "topics": [
+            {
+              "title": "Git & API clients",
+              "items": [
+                "Branch, commit, and PR habits for backend teams",
+                "Exploring endpoints with curl, Postman, or Bruno",
+                "Docker Compose for a local Postgres"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "CRUD API for members or products with Postgres",
+        "README or OpenAPI that documents every endpoint",
+        "Docker Compose so a teammate can run the API locally"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Authenticated, Tested Services",
+      "goal": "Ship APIs with auth, validation, migrations, and tests you trust",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Auth & Authorization",
+          "topics": [
+            {
+              "title": "Authentication",
+              "items": [
+                "Password hashing and sessions vs. JWT",
+                "OAuth/OIDC at a working level",
+                "Refresh tokens, expiry, and logout"
+              ]
+            },
+            {
+              "title": "Authorization",
+              "items": [
+                "Role checks in middleware",
+                "Resource ownership in handlers",
+                "Least privilege for service credentials"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Data Access & Validation",
+          "topics": [
+            {
+              "title": "Repositories and migrations",
+              "items": [
+                "Repository pattern over raw SQL/sqlc",
+                "Forward-only migrations and rollbacks",
+                "Transactions for multi-step writes"
+              ]
+            },
+            {
+              "title": "Validation & errors",
+              "items": [
+                "Request validation (go-playground/validator or manual)",
+                "Consistent error types and HTTP mapping",
+                "Idempotent creates for retries"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Testing the Backend",
+          "topics": [
+            {
+              "title": "Go tests",
+              "items": [
+                "table-driven unit tests",
+                "httptest and integration tests with a test DB",
+                "testify assertions and mocks where they help"
+              ]
+            },
+            {
+              "title": "API contracts",
+              "items": [
+                "OpenAPI as documentation and contract",
+                "Detecting breaking response changes",
+                "Seed data that matches production shapes"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Caching & Performance Basics",
+          "topics": [
+            {
+              "title": "Redis and query cost",
+              "items": [
+                "When to cache vs. when to fix the query",
+                "Cache keys, TTLs, and invalidation",
+                "EXPLAIN and slow-query awareness"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "REST API with JWT/session auth, roles, and tests",
+        "Migration-backed schema for a real feature",
+        "Rate-limited public endpoint with documented error codes"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Production-Grade Backend Systems",
+      "goal": "Design services that stay correct under load, retries, and money-moving traffic",
+      "duration": "8–10 wks",
+      "sections": [
+        {
+          "title": "Architecture & Concurrency",
+          "topics": [
+            {
+              "title": "Service boundaries",
+              "items": [
+                "Monolith vs. services — when each is enough",
+                "Context cancellation across handlers and workers",
+                "Outbox pattern for reliable side effects"
+              ]
+            },
+            {
+              "title": "Workers and messaging",
+              "items": [
+                "Background workers with queues (NATS, SQS, or Redis)",
+                "Retries, dead-letter queues, and poison messages",
+                "Idempotency keys for at-least-once delivery"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Security & Money-Safe Writes",
+          "topics": [
+            {
+              "title": "API security",
+              "items": [
+                "Injection, mass assignment, and secrets in env",
+                "Rate limiting, CORS, and webhook signature verification",
+                "PII handling and audit logs"
+              ]
+            },
+            {
+              "title": "Ledger-style consistency",
+              "items": [
+                "Immutable ledger rows vs. mutable balances",
+                "Idempotent payment and transfer endpoints",
+                "Reconciliation when callbacks are late or duplicated"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Observability & Shipping",
+          "topics": [
+            {
+              "title": "Logs, metrics, traces",
+              "items": [
+                "slog with request IDs",
+                "Prometheus metrics or OpenTelemetry",
+                "pprof for CPU/memory when needed"
+              ]
+            },
+            {
+              "title": "Containers and config",
+              "items": [
+                "Multi-stage Docker builds and scratch/distroless images",
+                "12-factor config and graceful shutdown",
+                "Health checks and migrations in CI"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "SACCO member and savings API with role-based access",
+        "Idempotent M-Pesa-style callback + reconciliation worker",
+        "Containerized Go service with CI tests and OpenAPI"
+      ]
+    }
+  ]
+}

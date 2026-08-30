@@ -1,0 +1,464 @@
+{
+  "id": "android",
+  "title": "Learn Android",
+  "tagline": "From first composable to production-grade Kotlin apps",
+  "description": "A three-level curriculum for building Android apps with Kotlin and Jetpack Compose — from static UIs through data-driven apps to production systems you can ship, test, and publish on the Play Store.",
+  "prerequisites": [
+    "Programming fundamentals in any language (variables, functions, collections)",
+    "Comfort using a computer and installing developer tools",
+    "Willingness to use Android Studio and an emulator or physical device"
+  ],
+  "tools": [
+    "Android Studio",
+    "Kotlin",
+    "Jetpack Compose",
+    "Material 3",
+    "ViewModel",
+    "Navigation Compose",
+    "Retrofit",
+    "OkHttp",
+    "Coroutines",
+    "Kotlin Serialization",
+    "Room",
+    "DataStore",
+    "Hilt",
+    "Paging 3",
+    "JUnit",
+    "MockK",
+    "Compose UI testing",
+    "Fastlane"
+  ],
+  "relatedRoleId": "mobile-engineer",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "Kotlin & Compose Foundations",
+      "goal": "Comfortable building simple, static-to-interactive Android UIs",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Kotlin & Android Prerequisites",
+          "topics": [
+            {
+              "title": "Kotlin essentials",
+              "items": [
+                "val/var, functions, and expression bodies",
+                "Null safety, data classes, and lambdas",
+                "Collections and common higher-order functions"
+              ]
+            },
+            {
+              "title": "Android Studio & Gradle",
+              "items": [
+                "Android Studio setup and SDK manager",
+                "Project structure (app module, manifests, resources)",
+                "Gradle basics: modules, dependencies, and sync"
+              ]
+            },
+            {
+              "title": "Android app lifecycle",
+              "items": [
+                "Activity basics and process lifecycle",
+                "Configuration changes and recreation",
+                "Running on emulator vs. a physical device"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Jetpack Compose Core Concepts",
+          "topics": [
+            {
+              "title": "What is Compose & why",
+              "items": [
+                "Declarative UI vs. the old XML/View system",
+                "Recomposition as the rendering model",
+                "When Compose fits (and when Views still appear)"
+              ]
+            },
+            {
+              "title": "Setting up a Compose project",
+              "items": [
+                "Empty Compose Activity template",
+                "Build.gradle Compose flags and BOM",
+                "Preview annotations in Android Studio"
+              ]
+            },
+            {
+              "title": "Composable functions",
+              "items": [
+                "@Composable rules and naming",
+                "Passing parameters into composables",
+                "Composing small UI into screens"
+              ]
+            },
+            {
+              "title": "Modifiers",
+              "items": [
+                "padding, size, background, and clickable",
+                "Modifier order matters",
+                "Chaining modifiers for layout and style"
+              ]
+            },
+            {
+              "title": "Layouts",
+              "items": [
+                "Column, Row, and Box",
+                "Arrangement, alignment, and weight",
+                "Scaffold, TopAppBar, and FAB basics"
+              ]
+            },
+            {
+              "title": "Lists & keys",
+              "items": [
+                "LazyColumn and LazyRow",
+                "Stable keys for list items",
+                "Avoiding index-as-key pitfalls"
+              ]
+            },
+            {
+              "title": "Conditional UI",
+              "items": [
+                "if/when inside composables",
+                "Empty, loading, and error placeholders",
+                "Early returns from composable functions"
+              ]
+            },
+            {
+              "title": "Basic styling",
+              "items": [
+                "Material 3 theming basics",
+                "Colors, typography, and shapes",
+                "Light/dark theme awareness"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "State & Events",
+          "topics": [
+            {
+              "title": "remember and mutableStateOf",
+              "items": [
+                "Local UI state that survives recomposition",
+                "State updates and what triggers a redraw",
+                "When state should live higher in the tree"
+              ]
+            },
+            {
+              "title": "Handling events",
+              "items": [
+                "Clicks with Modifier.clickable and Button onClick",
+                "TextField value and onValueChange",
+                "Passing lambdas down as event handlers"
+              ]
+            },
+            {
+              "title": "Controlled inputs & simple forms",
+              "items": [
+                "Controlled TextField, Switch, and Checkbox",
+                "Simple form submit and validation",
+                "Managing multiple fields in one screen"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Todo app with add, complete, and delete",
+        "Simple calculator",
+        "Product list with filtering",
+        "Debug layouts with Layout Inspector and Logcat"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Building Real Apps",
+      "goal": "Build multi-screen, data-driven, connected apps",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "State Management Deep Dive",
+          "topics": [
+            {
+              "title": "remember vs rememberSaveable",
+              "items": [
+                "Surviving configuration changes",
+                "What belongs in saved instance state",
+                "When remember is enough"
+              ]
+            },
+            {
+              "title": "State hoisting",
+              "items": [
+                "Lifting state to the caller",
+                "Stateless composables and event callbacks",
+                "Avoiding duplicated source of truth"
+              ]
+            },
+            {
+              "title": "ViewModel + StateFlow",
+              "items": [
+                "ViewModel as screen state owner",
+                "StateFlow vs LiveData for Compose",
+                "collectAsStateWithLifecycle"
+              ]
+            },
+            {
+              "title": "Unidirectional data flow",
+              "items": [
+                "UDF: events in, state out",
+                "Single screen UiState data classes",
+                "Reducing side effects in composables"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Navigation",
+          "topics": [
+            {
+              "title": "Navigation Compose",
+              "items": [
+                "NavHost, NavController, and destinations",
+                "Passing typed args between screens",
+                "Nested graphs and back stack",
+                "Bottom navigation with multiple back stacks"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Working with APIs",
+          "topics": [
+            {
+              "title": "Retrofit + OkHttp",
+              "items": [
+                "Defining REST interfaces",
+                "Interceptors, logging, and timeouts",
+                "Environment-based base URLs"
+              ]
+            },
+            {
+              "title": "Coroutines",
+              "items": [
+                "suspend functions and Dispatchers",
+                "viewModelScope and structured concurrency",
+                "Cancellation and error handling"
+              ]
+            },
+            {
+              "title": "UI states & JSON",
+              "items": [
+                "Loading, error, empty, and success states",
+                "Kotlin Serialization, Gson, or Moshi",
+                "Mapping DTOs to domain models"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Local Data & Forms",
+          "topics": [
+            {
+              "title": "Room database",
+              "items": [
+                "Entities, DAOs, and the database class",
+                "Simple persistence and Flow queries",
+                "Migrations at a high level"
+              ]
+            },
+            {
+              "title": "Forms in Compose",
+              "items": [
+                "Validation patterns and error messages",
+                "Keyboard, focus, and IME actions",
+                "Accessible form UX"
+              ]
+            },
+            {
+              "title": "DataStore",
+              "items": [
+                "Preferences DataStore vs SharedPreferences",
+                "Typed proto DataStore intro",
+                "User settings that survive process death"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Dependency Injection Basics",
+          "topics": [
+            {
+              "title": "Hilt (or manual DI first)",
+              "items": [
+                "Constructor injection for ViewModels",
+                "Modules, @Provides, and @Singleton",
+                "Why DI helps testing and swapping implementations"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Styling at Scale",
+          "topics": [
+            {
+              "title": "Material 3 theming",
+              "items": [
+                "Custom color schemes, typography, and shapes",
+                "Reusable composables as an in-app component library",
+                "Dynamic color and brand constraints"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Dashboard with summary cards and lists",
+        "E-commerce catalog with cart flow",
+        "Booking app with REST API integration",
+        "M-Pesa STK push demo via API (fintech integration pattern)"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Production-Grade Android",
+      "goal": "Architect, optimize, test, and ship scalable apps",
+      "duration": "8–12 wks",
+      "sections": [
+        {
+          "title": "Advanced Compose Patterns",
+          "topics": [
+            {
+              "title": "Custom layouts & modifiers",
+              "items": [
+                "Custom Layout composables",
+                "Modifier.Node and custom modifiers",
+                "Reusable slot APIs"
+              ]
+            },
+            {
+              "title": "Performance",
+              "items": [
+                "Controlling recomposition",
+                "derivedStateOf and stability annotations",
+                "LazyColumn performance (keys, item types, prefetch)"
+              ]
+            },
+            {
+              "title": "Animations",
+              "items": [
+                "Compose Animation APIs",
+                "Shared element transitions",
+                "When animation hurts performance"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Architecture at Scale",
+          "topics": [
+            {
+              "title": "Clean Architecture / MVI",
+              "items": [
+                "Layers: UI, domain, data",
+                "MVI in Compose apps",
+                "Repository pattern and use cases/interactors"
+              ]
+            },
+            {
+              "title": "Multi-module projects",
+              "items": [
+                "Feature and core modules",
+                "Gradle convention plugins at a high level",
+                "Avoiding circular dependencies"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Advanced State & Data",
+          "topics": [
+            {
+              "title": "Flows at scale",
+              "items": [
+                "Complex StateFlow and SharedFlow pipelines",
+                "Combining sources and mapping to UiState",
+                "Error and retry strategies"
+              ]
+            },
+            {
+              "title": "Offline-first",
+              "items": [
+                "Room + remote sync",
+                "Caching strategies and conflict handling",
+                "Paging 3 for large lists"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Testing",
+          "topics": [
+            {
+              "title": "Test pyramid for Android",
+              "items": [
+                "Unit tests with JUnit and MockK",
+                "Compose UI tests with ComposeTestRule",
+                "Instrumented/E2E with Espresso and UI Automator"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Authentication & Security",
+          "topics": [
+            {
+              "title": "Auth flows",
+              "items": [
+                "Firebase Auth, OAuth, or custom JWT",
+                "Token refresh and session expiry",
+                "Protected screens after login"
+              ]
+            },
+            {
+              "title": "Secure storage & hardening",
+              "items": [
+                "EncryptedSharedPreferences and Android Keystore",
+                "Network security config",
+                "ProGuard/R8 shrinking and obfuscation"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Build, CI/CD & Distribution",
+          "topics": [
+            {
+              "title": "Build variants",
+              "items": [
+                "Product flavors and build types",
+                "Signing configs and keystore hygiene",
+                "App Bundles and versioning"
+              ]
+            },
+            {
+              "title": "Shipping",
+              "items": [
+                "CI/CD with GitHub Actions or Fastlane",
+                "Play Store publishing and internal testing tracks",
+                "Accessibility: TalkBack and content descriptions"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "SACCO management app",
+        "ERP mobile module with role-based access",
+        "Fintech app with M-Pesa integration",
+        "Full auth, offline support, tests, and a Play Store-ready build"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "id": "automation",
+  "title": "Learn Test Automation",
+  "tagline": "From first UI script to reliable CI-gated suites",
+  "description": "A three-level curriculum for automation engineers — writing maintainable UI and API tests, designing stable frameworks, and owning flaky-free pipelines that protect releases without slowing the team.",
+  "prerequisites": [
+    "Programming fundamentals (variables, functions, classes) in JavaScript/TypeScript or Python",
+    "Basic QA understanding (test cases, bugs, regression)",
+    "Comfort with a terminal and Git"
+  ],
+  "tools": [
+    "Playwright",
+    "Cypress",
+    "Selenium",
+    "pytest",
+    "Jest / Vitest",
+    "Postman / Newman",
+    "REST Assured",
+    "GitHub Actions / GitLab CI",
+    "Allure / ReportPortal",
+    "Docker",
+    "BrowserStack"
+  ],
+  "relatedRoleId": "automation-engineer",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "First Automated Tests",
+      "goal": "Write and run reliable UI and API smoke tests for a single app",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Automation Foundations",
+          "topics": [
+            {
+              "title": "When to automate",
+              "items": [
+                "ROI: smoke and regression vs. one-off exploratory",
+                "Pyramid: unit, API, UI — and where automation fits",
+                "Flakiness as the #1 enemy"
+              ]
+            },
+            {
+              "title": "Tooling setup",
+              "items": [
+                "Installing Playwright or Cypress",
+                "Project structure and npm/pip scripts",
+                "Running tests locally and reading failures"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "UI Automation Basics",
+          "topics": [
+            {
+              "title": "Selectors & waits",
+              "items": [
+                "Roles, labels, and test IDs over brittle CSS",
+                "Auto-waiting vs. hard sleeps",
+                "Assertions that describe user-visible outcomes"
+              ]
+            },
+            {
+              "title": "Page objects (light)",
+              "items": [
+                "Grouping actions by screen",
+                "Reusable login helpers",
+                "Keeping tests readable as stories"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "API Automation Basics",
+          "topics": [
+            {
+              "title": "HTTP tests",
+              "items": [
+                "Status, headers, and JSON body assertions",
+                "Auth tokens in test setup",
+                "Data cleanup after create/update tests"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Playwright (or Cypress) smoke suite for login and one happy-path feature",
+        "API test suite covering CRUD with auth",
+        "Page-object refactor of your UI smoke tests",
+        "Failure report demo: screenshot + trace on a forced bug"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Frameworks & CI",
+      "goal": "Build a maintainable suite that runs on every PR and catches real regressions",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Framework Design",
+          "topics": [
+            {
+              "title": "Architecture",
+              "items": [
+                "Fixtures, factories, and test data builders",
+                "Environments and secrets handling",
+                "Tagging: smoke, regression, nightly"
+              ]
+            },
+            {
+              "title": "Stability patterns",
+              "items": [
+                "Idempotent setup and teardown",
+                "Network stubbing vs. real backends",
+                "Retry policy that does not hide bugs"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "CI Integration",
+          "topics": [
+            {
+              "title": "Pipelines",
+              "items": [
+                "GitHub Actions / GitLab CI job for PR checks",
+                "Artifacts: reports, videos, and traces",
+                "Parallel shards and time budgets"
+              ]
+            },
+            {
+              "title": "Reporting",
+              "items": [
+                "HTML/Allure reports stakeholders can read",
+                "Flake tracking and quarantine process",
+                "Owning the red build"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Cross-Layer Coverage",
+          "topics": [
+            {
+              "title": "API + UI combo",
+              "items": [
+                "Seeding state via API before UI flows",
+                "Contract tests against OpenAPI",
+                "Choosing the cheapest layer that catches the risk"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "PR-gated CI pipeline with smoke + artifact upload",
+        "Tagged suite: smoke on PR, full regression nightly",
+        "API-seeded UI flow that avoids brittle UI setup",
+        "Flake triage doc with quarantine rules and owners"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Automation at Scale",
+      "goal": "Own platform-level reliability, performance of the suite, and team-wide adoption",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Platform Thinking",
+          "topics": [
+            {
+              "title": "Shared libraries",
+              "items": [
+                "Internal test SDK for auth, fixtures, and reporting",
+                "Versioning and migration guides for other teams",
+                "Code review standards for automation PRs"
+              ]
+            },
+            {
+              "title": "Scale & cost",
+              "items": [
+                "Grid/cloud browsers and device farms",
+                "Suite runtime SLOs and pruning dead tests",
+                "Cost awareness for parallel cloud minutes"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Advanced Techniques",
+          "topics": [
+            {
+              "title": "Beyond happy paths",
+              "items": [
+                "Visual regression (baseline discipline)",
+                "Accessibility checks in CI",
+                "Chaos and negative-path automation"
+              ]
+            },
+            {
+              "title": "Observability of tests",
+              "items": [
+                "Tracing failures to product commits",
+                "Dashboards for pass rate and flake rate",
+                "Alerting when gates go red repeatedly"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Leadership",
+          "topics": [
+            {
+              "title": "Adoption",
+              "items": [
+                "Teaching developers to write and own tests",
+                "Automation strategy docs for product areas",
+                "Balancing coverage goals with delivery speed"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Shared test library published for 2+ product teams",
+        "Visual + a11y checks wired into nightly CI",
+        "Suite health dashboard (pass/flake/runtime) with action plan",
+        "Automation strategy for a new microservice or mobile app"
+      ]
+    }
+  ]
+}

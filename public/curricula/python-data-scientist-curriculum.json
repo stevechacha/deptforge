@@ -1,0 +1,175 @@
+{
+  "id": "python-data-scientist",
+  "title": "Python for Data Scientists",
+  "tagline": "From EDA to models that predict — and explanations stakeholders can use",
+  "description": "A three-level Python curriculum for Data Scientists. pandas and statistics first, then scikit-learn modeling, then evaluation, fairness, and monitoring so models survive contact with the real world.",
+  "prerequisites": [
+    "Python basics (or complete the analyst Python foundations in parallel)",
+    "High-school algebra; willingness to relearn probability in context",
+    "A public dataset you care about (finance, health, or operations)"
+  ],
+  "tools": [
+    "Python",
+    "Jupyter",
+    "pandas",
+    "NumPy",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "SQL",
+    "MLflow",
+    "SHAP"
+  ],
+  "relatedRoleId": "data-scientist",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "Quantitative Python Foundations",
+      "goal": "Clean data, explore it honestly, and state a question a model could answer",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Python for Analysis",
+          "topics": [
+            {
+              "title": "pandas & NumPy",
+              "items": [
+                "DataFrames, joins, and tidy tables",
+                "Vectorized operations vs. Python loops",
+                "Reproducible notebooks and seeds"
+              ]
+            },
+            {
+              "title": "Statistics refresher",
+              "items": [
+                "Distributions, sampling, and variance",
+                "Hypothesis testing at a working level",
+                "Confidence intervals and practical significance"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "EDA & Features",
+          "topics": [
+            {
+              "title": "Exploratory analysis",
+              "items": [
+                "Univariate and bivariate views",
+                "Leakage, target definition, and train/test splits",
+                "Missingness as a signal"
+              ]
+            },
+            {
+              "title": "Feature engineering",
+              "items": [
+                "Encodings, scaling, and datetime features",
+                "Aggregations from event logs",
+                "Writing features so they can be rebuilt in production later"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "EDA notebook on a public dataset with a written question",
+        "Baseline descriptive model of churn, default, or demand",
+        "Data dictionary and assumption list"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Machine Learning Core",
+      "goal": "Train, evaluate, and explain supervised models without fooling yourself",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Supervised Learning",
+          "topics": [
+            {
+              "title": "Regression & classification",
+              "items": [
+                "Linear/logistic baselines before complex models",
+                "Trees, ensembles, and when they help",
+                "Cross-validation that respects time or groups"
+              ]
+            },
+            {
+              "title": "Evaluation",
+              "items": [
+                "Precision, recall, ROC-AUC, and calibration",
+                "Imbalanced data and cost-sensitive choices",
+                "Business metrics vs. leaderboard metrics"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Explainability",
+          "topics": [
+            {
+              "title": "Why the model said that",
+              "items": [
+                "Feature importance and SHAP",
+                "Error analysis by segment",
+                "Communicating limits to non-technical partners"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "End-to-end classifier or regressor with a held-out test",
+        "SHAP or error-slice write-up",
+        "Credit/churn/collections model framed for a SACCO or fintech stakeholder"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Models in the Real World",
+      "goal": "Ship models with monitoring, fairness checks, and a clear recommendation",
+      "duration": "8–10 wks",
+      "sections": [
+        {
+          "title": "Applied Modeling",
+          "topics": [
+            {
+              "title": "Production-minded DS",
+              "items": [
+                "MLflow or equivalent experiment tracking",
+                "Feature/store awareness and training-serving skew",
+                "Handoff packages for ML engineers"
+              ]
+            },
+            {
+              "title": "Fairness & drift",
+              "items": [
+                "Bias checks on protected and proxy attributes",
+                "Data and concept drift",
+                "Retraining cadence and rollback criteria"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Unsupervised & time",
+          "topics": [
+            {
+              "title": "Beyond tabular class labels",
+              "items": [
+                "Clustering for segmentation",
+                "Time series forecasting basics",
+                "When not to use ML"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "End-to-end model on a real or public dataset with documented limitations",
+        "Monitoring sketch: what to watch in production",
+        "Recommendation memo: ship, iterate, or stop"
+      ]
+    }
+  ]
+}

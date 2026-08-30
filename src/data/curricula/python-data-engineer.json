@@ -1,0 +1,183 @@
+{
+  "id": "python-data-engineer",
+  "title": "Python for Data Engineers",
+  "tagline": "From scripts to trusted pipelines — warehouse data the company can use",
+  "description": "A three-level Python curriculum for Data Engineers. Focus on SQL, modeling, ETL/ELT, orchestration, and reliability — so analysts and scientists inherit clean, documented data.",
+  "prerequisites": [
+    "Programming fundamentals (Python preferred; Java/Scala is a plus)",
+    "Basic SQL",
+    "Comfort using a terminal, Git, and cloud consoles at a beginner level"
+  ],
+  "tools": [
+    "Python",
+    "SQL",
+    "pandas",
+    "Airflow",
+    "dbt",
+    "PostgreSQL",
+    "Cloud warehouse (BigQuery / Snowflake / Redshift)",
+    "Docker",
+    "Git",
+    "pytest"
+  ],
+  "relatedRoleId": "data-engineer",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "Python & Warehouse Foundations",
+      "goal": "Write Python that moves and shapes data, with solid SQL and modeling basics",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Python for Pipelines",
+          "topics": [
+            {
+              "title": "Python essentials",
+              "items": [
+                "Functions, modules, typing, and virtualenvs",
+                "Files, JSON, CSV, and pathlib",
+                "Error handling and logging (not print-only scripts)"
+              ]
+            },
+            {
+              "title": "SQL & modeling",
+              "items": [
+                "Advanced SQL: joins, CTEs, window functions",
+                "OLTP vs. OLAP",
+                "Star/snowflake schemas at a conceptual level"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "First Pipelines",
+          "topics": [
+            {
+              "title": "Extract & load",
+              "items": [
+                "Pulling from APIs and databases with Python",
+                "Idempotent loads and simple upserts",
+                "Config via environment variables"
+              ]
+            },
+            {
+              "title": "Warehouse intro",
+              "items": [
+                "Landing vs. curated layers",
+                "Incremental vs. full refresh",
+                "Why grain and keys matter"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Script that pulls an API into Postgres or a local warehouse",
+        "SQL model of transactions → dim/fact tables",
+        "Logged, retry-aware load job with a README"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Pipeline Engineering",
+      "goal": "Build scheduled ETL/ELT with tests, transformations, and observable failures",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Orchestration & Transform",
+          "topics": [
+            {
+              "title": "Airflow",
+              "items": [
+                "DAGs, operators, and sensors",
+                "Retries, SLAs, and dependencies",
+                "Local Airflow vs. managed (MWAA/Cloud Composer) at a high level"
+              ]
+            },
+            {
+              "title": "dbt",
+              "items": [
+                "Models, refs, and sources",
+                "Tests (unique, not_null, relationships)",
+                "Documentation and lineage"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Quality & Change",
+          "topics": [
+            {
+              "title": "Data quality",
+              "items": [
+                "Great Expectations or dbt tests in practice",
+                "Schema evolution without silent breakage",
+                "Alerting when row counts or freshness slip"
+              ]
+            },
+            {
+              "title": "Cloud warehouses",
+              "items": [
+                "Partitions, clustering, and cost basics",
+                "Change data capture at a working level",
+                "IAM and least-privilege for pipeline identities"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Airflow DAG: raw events → warehouse tables",
+        "dbt project with tests and docs site",
+        "Quality checks on a payments or M-Pesa-style transaction feed"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Reliable Data Platforms",
+      "goal": "Operate pipelines at scale with CDC, streaming awareness, and clear lineage",
+      "duration": "8–10 wks",
+      "sections": [
+        {
+          "title": "Scale & Streaming",
+          "topics": [
+            {
+              "title": "Incremental architecture",
+              "items": [
+                "CDC patterns and late-arriving data",
+                "Kafka/Pub/Sub at a working level",
+                "Batch vs. micro-batch vs. stream — when each is enough"
+              ]
+            },
+            {
+              "title": "Platform practices",
+              "items": [
+                "Dockerizing jobs and CI for dbt/pytest",
+                "Environment promotion (dev/staging/prod)",
+                "Cost, SLAs, and on-call for pipeline failures"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Governance",
+          "topics": [
+            {
+              "title": "Lineage & contracts",
+              "items": [
+                "Data contracts with producers",
+                "PII handling and access controls",
+                "Serving analysts and ML without copy-paste tables"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "End-to-end pipeline: raw events → warehouse → documented marts",
+        "Lineage diagram and runbook for a failed DAG",
+        "SACCO/fintech-style ledger tables with quality gates"
+      ]
+    }
+  ]
+}

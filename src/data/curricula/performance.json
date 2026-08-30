@@ -1,0 +1,234 @@
+{
+  "id": "performance",
+  "title": "Learn Performance Engineering",
+  "tagline": "From load scripts to production capacity you can defend",
+  "description": "A three-level curriculum for performance engineers — modeling realistic load, finding bottlenecks in apps and infrastructure, and turning metrics into capacity and SLO decisions teams can trust.",
+  "prerequisites": [
+    "Comfort with HTTP APIs and basic Linux commands",
+    "Programming basics in any language (for scripting load tests)",
+    "Familiarity with how web apps are deployed (app + DB + cache)"
+  ],
+  "tools": [
+    "k6",
+    "JMeter",
+    "Gatling",
+    "Locust",
+    "Grafana",
+    "Prometheus",
+    "Datadog / New Relic",
+    "Chrome Lighthouse",
+    "Wireshark",
+    "Docker",
+    "AWS / GCP load generators"
+  ],
+  "relatedRoleId": "performance-engineer",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "Performance Foundations",
+      "goal": "Run meaningful load tests and interpret latency, throughput, and error rate",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Core Concepts",
+          "topics": [
+            {
+              "title": "What performance means",
+              "items": [
+                "Latency, throughput, concurrency, and saturation",
+                "Percentiles (p50/p95/p99) vs. averages",
+                "Load, stress, soak, and spike tests"
+              ]
+            },
+            {
+              "title": "User-centric metrics",
+              "items": [
+                "Apdex and error budgets at a practical level",
+                "Frontend vitals (LCP, INP, CLS) overview",
+                "When slow is a product bug vs. an infra limit"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "First Load Scripts",
+          "topics": [
+            {
+              "title": "k6 or JMeter basics",
+              "items": [
+                "HTTP scenarios and think time",
+                "Virtual users and ramp patterns",
+                "Thresholds that fail the test when SLOs break"
+              ]
+            },
+            {
+              "title": "Reading results",
+              "items": [
+                "Pass/fail from thresholds",
+                "Spotting queueing and error cliffs",
+                "Comparing two runs fairly"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Environment Hygiene",
+          "topics": [
+            {
+              "title": "Valid tests",
+              "items": [
+                "Production-like data and config",
+                "Isolating the system under test",
+                "Documenting assumptions so results are repeatable"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "k6 (or JMeter) script for an API with p95 and error thresholds",
+        "Baseline report: ramp to failure and document the cliff",
+        "Lighthouse audit of a web page with top 3 fix recommendations",
+        "Compare two deploys with identical load profiles"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Finding Bottlenecks",
+      "goal": "Correlate load with system metrics and isolate root causes across the stack",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Realistic Workloads",
+          "topics": [
+            {
+              "title": "Workload modeling",
+              "items": [
+                "Traffic mix from analytics or access logs",
+                "Think times, sessions, and arrival rates",
+                "Data uniqueness and cache-warming effects"
+              ]
+            },
+            {
+              "title": "Scenario design",
+              "items": [
+                "Critical user journeys under load",
+                "Spike and soak scenarios",
+                "Multi-region and geo considerations"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Observability During Tests",
+          "topics": [
+            {
+              "title": "System signals",
+              "items": [
+                "CPU, memory, disk I/O, and network saturation",
+                "DB slow queries, locks, and connection pools",
+                "Cache hit rates and GC pauses"
+              ]
+            },
+            {
+              "title": "APM & dashboards",
+              "items": [
+                "Tracing a slow request end-to-end",
+                "Grafana/Prometheus boards for a test run",
+                "Linking load-generator metrics to app metrics"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Tuning Loop",
+          "topics": [
+            {
+              "title": "Hypothesis-driven improvement",
+              "items": [
+                "Change one variable per experiment",
+                "Config vs. code vs. schema bottlenecks",
+                "Writing recommendations engineers can ship"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Workload model from sample access logs + matching k6 scenarios",
+        "Bottleneck report with APM evidence for a slow endpoint",
+        "Soak test (2–8 hrs) with resource trend analysis",
+        "Before/after tuning study with controlled re-test"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Capacity & Performance Culture",
+      "goal": "Own SLOs, capacity planning, and performance gates in the delivery pipeline",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Capacity Planning",
+          "topics": [
+            {
+              "title": "Sizing systems",
+              "items": [
+                "Headroom, growth forecasts, and seasonal peaks",
+                "Horizontal vs. vertical scaling trade-offs",
+                "Cost-aware performance (perf per dollar)"
+              ]
+            },
+            {
+              "title": "Resilience under load",
+              "items": [
+                "Degradation modes and circuit breakers",
+                "Chaos + load combined experiments",
+                "Failover and multi-AZ behavior under stress"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Engineering Integration",
+          "topics": [
+            {
+              "title": "Perf in CI/CD",
+              "items": [
+                "Performance budgets and regression gates",
+                "Smoke load on every release candidate",
+                "Preventing silent latency creep"
+              ]
+            },
+            {
+              "title": "Frontend & edge",
+              "items": [
+                "CDN caching and TTFB under load",
+                "Client-side perf budgets in the product process",
+                "Synthetic monitoring vs. RUM"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Leadership",
+          "topics": [
+            {
+              "title": "Stakeholder communication",
+              "items": [
+                "Executive-ready capacity narratives",
+                "Risk of shipping without headroom",
+                "Building a reusable performance playbook"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Capacity plan for a peak event (sale, enrollment, payday traffic)",
+        "CI performance gate with budget thresholds and report artifact",
+        "Chaos + load experiment with resilience findings",
+        "Org playbook: when to run which test type and who signs off"
+      ]
+    }
+  ]
+}

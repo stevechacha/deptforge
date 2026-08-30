@@ -1,0 +1,453 @@
+{
+  "id": "ios",
+  "title": "Learn iOS",
+  "tagline": "From first SwiftUI view to App Store-ready production apps",
+  "description": "A three-level curriculum for building iOS apps with Swift and SwiftUI — from static UIs through data-driven apps to production systems you can ship, test, and submit to the App Store.",
+  "prerequisites": [
+    "Programming fundamentals in any language (variables, functions, collections)",
+    "A Mac capable of running a current Xcode",
+    "Willingness to use Simulator and, ideally, a physical iPhone"
+  ],
+  "tools": [
+    "Xcode",
+    "Swift",
+    "SwiftUI",
+    "Swift Package Manager",
+    "NavigationStack",
+    "URLSession",
+    "Swift Concurrency",
+    "Codable",
+    "SwiftData",
+    "UserDefaults",
+    "XCTest",
+    "Swift Testing",
+    "XCUITest",
+    "Fastlane",
+    "Xcode Cloud",
+    "TestFlight"
+  ],
+  "relatedRoleId": "mobile-engineer",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "Swift & SwiftUI Foundations",
+      "goal": "Comfortable building simple, static-to-interactive iOS UIs",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Swift & Xcode Prerequisites",
+          "topics": [
+            {
+              "title": "Swift essentials",
+              "items": [
+                "let/var, functions, and closures",
+                "Optionals and safe unwrapping",
+                "Structs vs classes, and collections"
+              ]
+            },
+            {
+              "title": "Xcode & Swift Package Manager",
+              "items": [
+                "Xcode setup and project templates",
+                "Project structure, targets, and schemes",
+                "Swift Package Manager basics"
+              ]
+            },
+            {
+              "title": "iOS app lifecycle",
+              "items": [
+                "App and Scene lifecycle concepts",
+                "What replaced AppDelegate for new SwiftUI apps",
+                "Running on Simulator vs. a physical device"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "SwiftUI Core Concepts",
+          "topics": [
+            {
+              "title": "What is SwiftUI & why",
+              "items": [
+                "Declarative UI vs. UIKit",
+                "View trees and identity",
+                "When UIKit still shows up (UIViewRepresentable)"
+              ]
+            },
+            {
+              "title": "Setting up a SwiftUI project",
+              "items": [
+                "App protocol and WindowGroup",
+                "Preview canvas in Xcode",
+                "Assets catalog basics"
+              ]
+            },
+            {
+              "title": "Views & the View protocol",
+              "items": [
+                "body as a computed view tree",
+                "Extracting subviews",
+                "Passing data into views"
+              ]
+            },
+            {
+              "title": "Modifiers",
+              "items": [
+                "padding, frame, background, and clipShape",
+                "Modifier order matters",
+                "Reusable ViewModifier types"
+              ]
+            },
+            {
+              "title": "Layouts",
+              "items": [
+                "VStack, HStack, and ZStack",
+                "Spacer, alignment, and frames",
+                "ScrollView and safe area"
+              ]
+            },
+            {
+              "title": "Lists & identifiable items",
+              "items": [
+                "List and ForEach",
+                "Identifiable and stable IDs",
+                "Navigation from a row"
+              ]
+            },
+            {
+              "title": "Conditional UI",
+              "items": [
+                "if/switch inside ViewBuilder",
+                "Empty, loading, and error placeholders",
+                "@ViewBuilder helpers"
+              ]
+            },
+            {
+              "title": "Basic styling",
+              "items": [
+                "Colors, fonts, and SF Symbols",
+                "System vs custom fonts",
+                "Light/dark appearance"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "State & Events",
+          "topics": [
+            {
+              "title": "@State and @Binding",
+              "items": [
+                "Local view state",
+                "Passing bindings to children",
+                "When state should live higher in the tree"
+              ]
+            },
+            {
+              "title": "Handling events",
+              "items": [
+                "Button taps and gestures",
+                "TextField and text input",
+                "Passing actions as closures"
+              ]
+            },
+            {
+              "title": "Controlled inputs & simple forms",
+              "items": [
+                "TextField, Toggle, and Picker",
+                "Form submit and basic validation",
+                "Managing multiple fields on one screen"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Todo app with add, complete, and delete",
+        "Simple calculator",
+        "Product list with filtering",
+        "Debug with Xcode previews, breakpoints, and the console"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Building Real Apps",
+      "goal": "Build multi-screen, data-driven, connected apps",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "State Management Deep Dive",
+          "topics": [
+            {
+              "title": "Object-based state",
+              "items": [
+                "@StateObject, @ObservedObject, and @EnvironmentObject",
+                "ObservableObject vs the @Observable macro",
+                "Observation framework and fine-grained updates"
+              ]
+            },
+            {
+              "title": "Unidirectional data flow",
+              "items": [
+                "MVVM in SwiftUI",
+                "Events in, state out",
+                "Keeping views thin"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Navigation",
+          "topics": [
+            {
+              "title": "NavigationStack",
+              "items": [
+                "NavigationLink and value-based navigation",
+                "Passing data between screens",
+                "Programmatic navigation with path"
+              ]
+            },
+            {
+              "title": "Tab-based navigation",
+              "items": [
+                "TabView and tab items",
+                "Per-tab navigation stacks",
+                "Deep links at a high level"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Working with APIs",
+          "topics": [
+            {
+              "title": "URLSession",
+              "items": [
+                "REST GET/POST with URLSession",
+                "HTTP status handling",
+                "Environment-based base URLs"
+              ]
+            },
+            {
+              "title": "Swift Concurrency",
+              "items": [
+                "async/await and Task",
+                "MainActor for UI updates",
+                "Cancellation and error handling"
+              ]
+            },
+            {
+              "title": "UI states & JSON",
+              "items": [
+                "Loading, error, empty, and success states",
+                "Codable for JSON parsing",
+                "Mapping DTOs to domain models"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Local Data & Forms",
+          "topics": [
+            {
+              "title": "SwiftData (or Core Data)",
+              "items": [
+                "Models, ModelContainer, and queries",
+                "Simple persistence on device",
+                "When Core Data still appears"
+              ]
+            },
+            {
+              "title": "Forms & validation",
+              "items": [
+                "Form, TextField, and focused fields",
+                "Validation patterns and error messages",
+                "Accessible form UX"
+              ]
+            },
+            {
+              "title": "UserDefaults",
+              "items": [
+                "Simple preferences and flags",
+                "AppStorage vs UserDefaults",
+                "What not to store in defaults"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Dependency Management Basics",
+          "topics": [
+            {
+              "title": "Environment-based DI",
+              "items": [
+                "Injecting services via Environment",
+                "Protocol-based dependencies for tests",
+                "Swift Package boundaries"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Styling at Scale",
+          "topics": [
+            {
+              "title": "Design system basics",
+              "items": [
+                "Custom ViewModifiers and reusable styles",
+                "Typography, spacing, and color assets",
+                "Semantic colors for light/dark"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Dashboard with summary cards and lists",
+        "E-commerce catalog with cart flow",
+        "Booking app with REST API integration",
+        "M-Pesa via API (fintech integration pattern)"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Production-Grade iOS",
+      "goal": "Architect, optimize, test, and ship scalable apps",
+      "duration": "8–12 wks",
+      "sections": [
+        {
+          "title": "Advanced SwiftUI Patterns",
+          "topics": [
+            {
+              "title": "Custom layouts",
+              "items": [
+                "Layout protocol",
+                "Custom ViewModifiers at scale",
+                "PreferenceKey for child-to-parent data"
+              ]
+            },
+            {
+              "title": "Performance",
+              "items": [
+                "View identity and equatable views",
+                "Avoiding unnecessary re-renders",
+                "@Observable fine-grained updates"
+              ]
+            },
+            {
+              "title": "Animations & transitions",
+              "items": [
+                "Implicit vs explicit animations",
+                "Matched geometry effects",
+                "When animation hurts performance"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Architecture at Scale",
+          "topics": [
+            {
+              "title": "Architecture options",
+              "items": [
+                "Clean Architecture overview",
+                "MVVM-C and TCA (The Composable Architecture)",
+                "Repository pattern and use cases"
+              ]
+            },
+            {
+              "title": "Multi-module projects",
+              "items": [
+                "Swift Package feature modules",
+                "App target vs library targets",
+                "Avoiding circular dependencies"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Advanced State & Data",
+          "topics": [
+            {
+              "title": "Async pipelines",
+              "items": [
+                "Combine or AsyncStream pipelines",
+                "Mapping multiple sources into UI state",
+                "Error and retry strategies"
+              ]
+            },
+            {
+              "title": "Offline-first",
+              "items": [
+                "SwiftData/Core Data + remote sync",
+                "Caching and conflict handling",
+                "Pagination for large lists"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Testing",
+          "topics": [
+            {
+              "title": "Test pyramid for iOS",
+              "items": [
+                "Unit tests with XCTest and Swift Testing",
+                "SwiftUI UI tests with XCUITest",
+                "Snapshot testing basics"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Authentication & Security",
+          "topics": [
+            {
+              "title": "Auth flows",
+              "items": [
+                "Sign in with Apple, OAuth, or custom JWT",
+                "Token refresh and session expiry",
+                "Protected screens after login"
+              ]
+            },
+            {
+              "title": "Secure storage & hardening",
+              "items": [
+                "Keychain for secrets",
+                "App Transport Security",
+                "Code obfuscation basics"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Build, CI/CD & Distribution",
+          "topics": [
+            {
+              "title": "Signing & configs",
+              "items": [
+                "Build configurations and schemes",
+                "Signing and provisioning profiles",
+                "Versioning and build numbers"
+              ]
+            },
+            {
+              "title": "Shipping",
+              "items": [
+                "CI/CD with Xcode Cloud or Fastlane",
+                "App Store submission and TestFlight",
+                "Accessibility: VoiceOver and Dynamic Type"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "SACCO management app",
+        "ERP mobile module with role-based access",
+        "Fintech app with M-Pesa integration",
+        "Full auth, offline support, tests, and an App Store-ready build"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "id": "uiux",
+  "title": "Learn UI/UX Design",
+  "tagline": "From first wireframe to systems and flows people can actually use",
+  "description": "A three-level curriculum for UI/UX Designers. Learn visual fundamentals and Figma, then design systems and interaction, then ship with product and engineering — accessible, consistent interfaces with a documented process, not just pretty screens.",
+  "prerequisites": [
+    "Comfort using a computer and learning a professional design tool",
+    "Willingness to show work in progress and take critique",
+    "A product you use often enough to notice what is confusing"
+  ],
+  "tools": [
+    "Figma",
+    "FigJam / Miro",
+    "Design systems",
+    "Figma prototyping",
+    "Contrast checkers",
+    "Whimsical",
+    "Notion",
+    "Material Design / Apple HIG"
+  ],
+  "relatedRoleId": "uiux-designer",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "Visual Design & Figma Foundations",
+      "goal": "Comfortable designing clear static screens and simple flows in Figma",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Visual Design Principles",
+          "topics": [
+            {
+              "title": "Hierarchy, type & color",
+              "items": [
+                "Type scale, weight, and line length for UI",
+                "Color: brand, semantic (success/error), and contrast",
+                "Spacing, alignment, and grouping so screens scan"
+              ]
+            },
+            {
+              "title": "Layout & composition",
+              "items": [
+                "Grids, margins, and consistent spacing systems",
+                "Mobile-first vs. desktop: density and thumb zones",
+                "Cards vs. lists vs. tables — pick the pattern for the job"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Figma Fundamentals",
+          "topics": [
+            {
+              "title": "Frames, auto-layout & components",
+              "items": [
+                "Frames vs. groups; constraints for resize",
+                "Auto-layout for rows, stacks, and padding",
+                "Components, variants, and when to detach"
+              ]
+            },
+            {
+              "title": "From wireframe to mock",
+              "items": [
+                "Low-fidelity first: boxes and labels before polish",
+                "Hi-fi: applying type, color, and real copy",
+                "Naming layers and pages so a teammate can open the file"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Flows & Product Patterns",
+          "topics": [
+            {
+              "title": "Common screens",
+              "items": [
+                "Onboarding, login, home, list, detail, and forms",
+                "Empty, loading, and error states as first-class screens",
+                "Navigation: tabs, stacks, and when a modal is wrong"
+              ]
+            },
+            {
+              "title": "Platform conventions",
+              "items": [
+                "Material and iOS HIG as starting points, not cages",
+                "Mobile vs. web: tap targets, hover, and keyboards",
+                "Copy in the UI: labels, buttons, and error messages"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Redesign one cluttered screen using only type, spacing, and hierarchy (no new features)",
+        "Low-fi wireframes for a 4-screen flow (e.g. SACCO deposit or send-money)",
+        "High-fidelity login + home for a small product, with empty and error states",
+        "Type and color scale plus a short rationale for a brand"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Systems, Interaction & Prototypes",
+      "goal": "Build reusable components, interactive prototypes, and flows you can test with people",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Design Systems",
+          "topics": [
+            {
+              "title": "Tokens & components",
+              "items": [
+                "Color, type, radius, and spacing as tokens",
+                "Buttons, inputs, lists, and dialogs as a library",
+                "Variants: size, state, and intent — without exploding the file"
+              ]
+            },
+            {
+              "title": "Using and extending a system",
+              "items": [
+                "When to reuse vs. invent a new pattern",
+                "Documentation in Figma: usage, do/don't",
+                "Working from an existing system (Material, a company kit)"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Interaction Design",
+          "topics": [
+            {
+              "title": "States & feedback",
+              "items": [
+                "Hover, focus, pressed, disabled, and loading",
+                "Validation: inline vs. on submit",
+                "Destructive actions: confirm, undo, and copy"
+              ]
+            },
+            {
+              "title": "Complex flows",
+              "items": [
+                "Multi-step forms and progress",
+                "Permissions, payments, and KYC-style friction",
+                "Responsive: same feature on phone and desktop"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Prototyping & Critique",
+          "topics": [
+            {
+              "title": "Prototypes for testing",
+              "items": [
+                "Figma prototypes: flows, overlays, and back stacks",
+                "Fidelity: when a clickable wireframe is enough",
+                "Task-based prototypes vs. marketing demos"
+              ]
+            },
+            {
+              "title": "Critique & iteration",
+              "items": [
+                "Giving and receiving critique without defending pixels",
+                "Annotating decisions: problem, options, choice",
+                "Version history and presenting a before/after"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "Small component library: buttons, text fields, lists, and alerts with states",
+        "Interactive prototype of a multi-step flow (onboarding, checkout, or loan application)",
+        "Five-task usability test on the prototype and a short findings list",
+        "Responsive web + mobile of the same feature, sharing one component set"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Product Design at Scale",
+      "goal": "Ship accessible, documented design that engineering can build and product can measure",
+      "duration": "8–10 wks",
+      "sections": [
+        {
+          "title": "Accessibility & Quality",
+          "topics": [
+            {
+              "title": "Accessible visual design",
+              "items": [
+                "WCAG contrast, focus order, and tap targets",
+                "Color not as the only signal; motion and reduced-motion",
+                "Forms, errors, and labels that work with assistive tech"
+              ]
+            },
+            {
+              "title": "Design QA",
+              "items": [
+                "Handoff: specs, redlines, and asset export",
+                "Checking the build against the file",
+                "Edge cases engineering will hit first if you skip them"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Working With Product & Engineering",
+          "topics": [
+            {
+              "title": "The design brief and the PRD",
+              "items": [
+                "Translating a PM problem into flows and options",
+                "Presenting 2–3 directions with a recommendation",
+                "Scope cuts that preserve the user job"
+              ]
+            },
+            {
+              "title": "Handoff that does not stall the sprint",
+              "items": [
+                "Dev-ready files: components, naming, and inspect",
+                "Copy, empty states, and error strings in the source of truth",
+                "Design tickets vs. sitting in the engineering stand-up"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Systems & Craft at Scale",
+          "topics": [
+            {
+              "title": "Design ops",
+              "items": [
+                "Governance: who can change the system",
+                "Contribution model for new components",
+                "Audit of a live product vs. the kit"
+              ]
+            },
+            {
+              "title": "Judgment",
+              "items": [
+                "When research is required vs. a heuristic pass",
+                "Visual polish vs. shipping the job-to-be-done",
+                "Ethics: dark patterns, dark patterns adjacent, and saying no"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "End-to-end feature: research notes, system components, prototype, and handoff file",
+        "Accessibility pass on a flow with annotated specs and a contrast report",
+        "Design a complex flow (KYC, payments, or role-based permissions) including failure paths",
+        "Critique a live product and propose a measured redesign with before/after and rationale"
+      ]
+    }
+  ]
+}

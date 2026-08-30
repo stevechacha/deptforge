@@ -1,0 +1,273 @@
+{
+  "id": "backend",
+  "title": "Learn Backend with Node.js",
+  "tagline": "TypeScript APIs from first route to production services",
+  "description": "A three-level curriculum for building backend services with Node.js and TypeScript — from HTTP and SQL through authenticated APIs to systems you can test, cache, observe, and ship.",
+  "prerequisites": [
+    "Programming fundamentals in any language (variables, functions, collections)",
+    "Comfort using a terminal, Git, and a code editor",
+    "Willingness to install Node.js and a local PostgreSQL instance"
+  ],
+  "tools": [
+    "Node.js",
+    "TypeScript",
+    "Express or Fastify",
+    "PostgreSQL",
+    "Prisma or Drizzle",
+    "Redis",
+    "Postman or Bruno",
+    "Docker",
+    "Jest or Vitest",
+    "Git/GitHub"
+  ],
+  "relatedRoleId": "backend-engineer",
+  "levels": [
+    {
+      "level": "Beginner",
+      "title": "HTTP, SQL & First APIs",
+      "goal": "Stand up a small HTTP API that reads and writes real data",
+      "duration": "4–6 wks",
+      "sections": [
+        {
+          "title": "Language, HTTP & SQL Foundations",
+          "topics": [
+            {
+              "title": "TypeScript for services",
+              "items": [
+                "Types, functions, async/await, and modules",
+                "Error handling without swallowing failures",
+                "Project layout: src, scripts, and environment files"
+              ]
+            },
+            {
+              "title": "How the web talks",
+              "items": [
+                "HTTP methods, status codes, and headers",
+                "JSON request and response bodies",
+                "REST principles: resources, URLs, and idempotency"
+              ]
+            },
+            {
+              "title": "SQL & relational design",
+              "items": [
+                "Tables, primary keys, and foreign keys",
+                "SELECT, JOIN, WHERE, and GROUP BY",
+                "Indexes you actually need on day one"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Building a First Service",
+          "topics": [
+            {
+              "title": "Framework basics",
+              "items": [
+                "Express or Fastify routing and middleware",
+                "Parsing bodies, query params, and path params",
+                "Structured logging instead of console.log-only"
+              ]
+            },
+            {
+              "title": "Talking to PostgreSQL",
+              "items": [
+                "Connecting with a driver or query builder",
+                "Parameterized queries (never string-concat SQL)",
+                "Migrations for schema changes"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Local Tooling",
+          "topics": [
+            {
+              "title": "Git & API clients",
+              "items": [
+                "Branch, commit, and PR habits for backend teams",
+                "Exploring endpoints with Postman or Bruno",
+                "Docker Compose for a local Postgres"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "CRUD API for members or products with Postgres",
+        "OpenAPI or README that documents every endpoint",
+        "Docker Compose so a teammate can run the API locally"
+      ]
+    },
+    {
+      "level": "Intermediate",
+      "title": "Authenticated, Tested Services",
+      "goal": "Ship APIs with auth, validation, migrations, and tests you trust",
+      "duration": "6–8 wks",
+      "sections": [
+        {
+          "title": "Auth & Authorization",
+          "topics": [
+            {
+              "title": "Authentication",
+              "items": [
+                "Password hashing (bcrypt/argon2) and sessions vs. JWT",
+                "OAuth/OIDC at a working level",
+                "Refresh tokens, expiry, and logout"
+              ]
+            },
+            {
+              "title": "Authorization",
+              "items": [
+                "Role-based access on routes",
+                "Resource ownership checks (user can only see their records)",
+                "Principle of least privilege for service accounts"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Data Modeling & ORMs",
+          "topics": [
+            {
+              "title": "ORMs and migrations",
+              "items": [
+                "Prisma or Drizzle models mapped to tables",
+                "Forward-only migrations and rollbacks",
+                "Transactions for multi-step writes"
+              ]
+            },
+            {
+              "title": "Validation & errors",
+              "items": [
+                "Schema validation (Zod or similar) at the boundary",
+                "Consistent error shapes and HTTP status mapping",
+                "Idempotent creates for retries"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Testing the Backend",
+          "topics": [
+            {
+              "title": "Unit and integration tests",
+              "items": [
+                "Jest or Vitest for handlers and domain logic",
+                "Test database or transactions that roll back",
+                "HTTP-level tests against the real router"
+              ]
+            },
+            {
+              "title": "API contracts",
+              "items": [
+                "OpenAPI as the source of truth",
+                "Contract tests for breaking changes",
+                "Seed data that matches production shapes"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Caching & Performance Basics",
+          "topics": [
+            {
+              "title": "Redis and query cost",
+              "items": [
+                "When to cache vs. when to fix the query",
+                "Cache keys, TTLs, and invalidation",
+                "EXPLAIN and slow-query awareness"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "REST API with JWT/session auth, roles, and tests",
+        "Migration-backed schema for a real feature (not a toy table)",
+        "Rate-limited public endpoint with documented error codes"
+      ]
+    },
+    {
+      "level": "Expert",
+      "title": "Production-Grade Backend Systems",
+      "goal": "Design services that stay correct under load, retries, and money-moving traffic",
+      "duration": "8–10 wks",
+      "sections": [
+        {
+          "title": "Architecture & Messaging",
+          "topics": [
+            {
+              "title": "Service boundaries",
+              "items": [
+                "Monolith vs. modular monolith vs. services — when each is enough",
+                "Synchronous APIs vs. async jobs",
+                "Outbox pattern for reliable side effects"
+              ]
+            },
+            {
+              "title": "Queues and workers",
+              "items": [
+                "Background jobs (BullMQ, SQS, or similar)",
+                "Retries, dead-letter queues, and poison messages",
+                "Exactly-once vs. at-least-once and idempotency keys"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Security & Money-Safe Writes",
+          "topics": [
+            {
+              "title": "API security",
+              "items": [
+                "Injection, mass assignment, and secrets in env — not git",
+                "Rate limiting, CORS, and webhook signature verification",
+                "PII handling and audit logs for sensitive reads"
+              ]
+            },
+            {
+              "title": "Ledger-style consistency",
+              "items": [
+                "Immutable ledger rows vs. mutable balances",
+                "Idempotent payment and transfer endpoints",
+                "Reconciliation jobs when a callback is late or duplicated"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Observability",
+          "topics": [
+            {
+              "title": "Logs, metrics, traces",
+              "items": [
+                "Structured logs with request IDs",
+                "RED/USE metrics on the API",
+                "Tracing a request across handlers and jobs"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Shipping",
+          "topics": [
+            {
+              "title": "Containers and config",
+              "items": [
+                "Multi-stage Docker images and non-root users",
+                "12-factor config: env, secrets, and feature flags",
+                "Health checks, graceful shutdown, and migrations in CI"
+              ]
+            }
+          ]
+        }
+      ],
+      "projects": [
+        "SACCO member and savings API with role-based access",
+        "Idempotent M-Pesa-style callback + reconciliation worker",
+        "Load-tested endpoint with a cache layer and a runbook",
+        "Containerized service with CI tests and OpenAPI published"
+      ]
+    }
+  ]
+}
