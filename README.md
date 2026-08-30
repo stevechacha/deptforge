@@ -1,6 +1,8 @@
-# Deptforge
+# Deptforge (web)
 
 A stage-by-stage learning pathway for modern tech careers — seven departments, twenty-eight roles, with requirements, tools, and course outlines.
+
+This folder is the Vite frontend under the Deptforge monorepo (`../api`, `../infra`). See `../README.md` for the full layout.
 
 **Brand map (locked):** Deptforge (this product) · Credopen (access / attendance) · Systforge (custom systems agency)
 
